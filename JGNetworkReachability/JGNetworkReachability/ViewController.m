@@ -7,6 +7,8 @@
 //
 
 #import "ViewController.h"
+#import "JGNetworkReachability.h"
+#import "TestViewController.h"
 
 @interface ViewController ()
 
@@ -16,14 +18,26 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view, typically from a nib.
+    
+    NSLog(@"Init : %@", [[JGNetworkReachability sharedInstance] reachabilityStatusString]);
+    
+    // 开启监听
+    [[JGNetworkReachability sharedInstance] startMonitor];
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [super viewDidAppear:animated];
+    
+    TestViewController *ctr = [[TestViewController alloc] init];
+    UINavigationController *nav = [[UINavigationController alloc] initWithRootViewController:ctr];
+    [self presentViewController:nav animated:YES completion:^{
+        
+    }];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
 }
-
 
 @end
