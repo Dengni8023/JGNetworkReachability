@@ -12,9 +12,6 @@
 #import <netinet/in.h>
 #import <netinet6/in6.h>
 
-NSString *const JGNetworkReachabilityDidChangeNotification = @"com.meijigao.jgnetwork.reachability.change";
-NSString *const JGNetworkReachabilityNotificationStatusKey = @"JGNetworkReachabilityNotificationStatusKey";
-
 typedef void (^JGNetworkReachabilityStatusBlock)();
 
 static void JGReachabilityStatusChange(SCNetworkReachabilityFlags flags, JGNetworkReachabilityStatusBlock block) {
@@ -32,7 +29,6 @@ static void JGNetworkReachabilityCallback(SCNetworkReachabilityRef __unused targ
     JGReachabilityStatusChange(flags, (__bridge JGNetworkReachabilityStatusBlock)info);
 }
 
-
 static const void *JGNetworkReachabilityRetainCallback(const void *info) {
     
     return Block_copy(info);
@@ -49,8 +45,8 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
 
 @property (nonatomic, assign, readonly) SCNetworkReachabilityRef reachabilityRef;
 @property (nonatomic, assign, readonly) BOOL runningSchedule;
-@property (nonatomic, strong, readonly) NSMutableDictionary *statusNotifications;
-@property (nonatomic, strong, readonly) NSPointerArray *statusDelegates;
+
+@property (nonatomic, strong, readonly) NSMapTable *statusBlocks;
 
 @end
 
@@ -75,6 +71,8 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
     
     self = [super init];
     if (self) {
+        
+        _statusBlocks = [[NSMapTable alloc] initWithKeyOptions:NSPointerFunctionsWeakMemory valueOptions:NSPointerFunctionsStrongMemory capacity:0];
         
         //创建零地址，0.0.0.0的地址表示查询本机的网络连接状态
 #if (defined(__IPHONE_OS_VERSION_MIN_REQUIRED) && __IPHONE_OS_VERSION_MIN_REQUIRED >= 90000) || (defined(__MAC_OS_X_VERSION_MIN_REQUIRED) && __MAC_OS_X_VERSION_MIN_REQUIRED >= 101100)
@@ -144,46 +142,18 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
     _runningSchedule = !SCNetworkReachabilityUnscheduleFromRunLoop(self.reachabilityRef, CFRunLoopGetMain(), kCFRunLoopCommonModes);
 }
 
-- (void)addObserver:(id)observer reachabilityStatusChange:(JGNetworkReachabilityStatusChangeAction)notification {
-    
-    if (!_statusNotifications) {
-        
-        _statusNotifications = [[NSMutableDictionary alloc] init];
-    }
+- (void)addStatusObserver:(id)observer action:(JGNetworkReachabilityStatusChangeAction)notification {
     
     if (observer && notification) {
         
-        NSObject *obj = (NSObject *)observer;
-        [self.statusNotifications setObject:notification forKey:[NSString stringWithFormat:@"%lu", (unsigned long)obj.hash]];
-    }
-}
-
-- (void)removeObserver:(id)observer {
-    
-    if (observer) {
-        
-        NSObject *obj = (NSObject *)observer;
-        [self.statusNotifications removeObjectForKey:[NSString stringWithFormat:@"%lu", (unsigned long)obj.hash]];
-    }
-}
-
-- (void)addDelegate:(id<JGNetworkReachabilityDelegate>)delegate {
-    
-    if (!_statusDelegates) {
-        
-        _statusDelegates = [NSPointerArray weakObjectsPointerArray];
-    }
-    
-    if ([delegate respondsToSelector:@selector(networkReachability:didChangeStatus:)]) {
-        
-        [self.statusDelegates addPointer:(__bridge void * _Nullable)(delegate)];
+        [self.statusBlocks setObject:notification forKey:observer];
     }
 }
 
 - (void)notifyReachabilityStatusChange {
     
     // Observer
-    for (id obj in self.statusNotifications.allValues) {
+    for (id obj in self.statusBlocks.objectEnumerator.allObjects) {
         
         JGNetworkReachabilityStatusChangeAction action = obj;
         if (action) {
@@ -191,19 +161,6 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
             action(self.reachabilityStatus);
         }
     }
-    
-    // Delegate
-    for (id target in self.statusDelegates) {
-        
-        if ([target respondsToSelector:@selector(networkReachability:didChangeStatus:)]) {
-            
-            [target networkReachability:self didChangeStatus:self.reachabilityStatus];
-        }
-    }
-    
-    // Notification
-    NSDictionary *userInfo = @{JGNetworkReachabilityNotificationStatusKey : @(self.reachabilityStatus)};
-    [[NSNotificationCenter defaultCenter] postNotificationName:JGNetworkReachabilityDidChangeNotification object:nil userInfo:userInfo];
 }
 
 #pragma mark - Getter

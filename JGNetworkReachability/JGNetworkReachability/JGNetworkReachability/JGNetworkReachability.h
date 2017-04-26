@@ -10,9 +10,6 @@
 
 NS_ASSUME_NONNULL_BEGIN
 
-FOUNDATION_EXPORT NSString *const JGNetworkReachabilityDidChangeNotification;
-FOUNDATION_EXPORT NSString *const JGNetworkReachabilityNotificationStatusKey;
-
 /**
  * 网络连接类型
  */
@@ -35,7 +32,6 @@ typedef NS_ENUM(NSInteger, JGNetworkReachabilityWWAN) {
 
 typedef void (^JGNetworkReachabilityStatusChangeAction)(JGNetworkReachabilityStatus status);
 
-@protocol JGNetworkReachabilityDelegate;
 @interface JGNetworkReachability : NSObject
 
 /** 网络连接类型 */
@@ -64,29 +60,12 @@ typedef void (^JGNetworkReachabilityStatusChangeAction)(JGNetworkReachabilitySta
 - (void)startMonitor;
 
 /**
- * 状态变化监听处理
- * block需注意内存问题
- * dealloc 调用 removeObserver:移除监听
+ 状态变化监听处理，可添加多个监听者，注意block内存问题
+
+ @param observer 监听接收者
+ @param notification 监听处理block
  */
-- (void)addObserver:(id)observer reachabilityStatusChange:(nullable JGNetworkReachabilityStatusChangeAction)notification;
-
-/**
- * 状态变化监听移除
- * 存在监听则移除，不存在则不做处理
- */
-- (void)removeObserver:(id)observer;
-
-/**
- * 状态变化监听回调代理，内部处理内存问题，不需外部处理
- */
-- (void)addDelegate:(id<JGNetworkReachabilityDelegate>)delegate;
-
-@end
-
-@protocol JGNetworkReachabilityDelegate <NSObject>
-
-@optional
-- (void)networkReachability:(JGNetworkReachability *)networkReachability didChangeStatus:(JGNetworkReachabilityStatus)status;
+- (void)addStatusObserver:(id)observer action:(nullable JGNetworkReachabilityStatusChangeAction)notification;
 
 @end
 

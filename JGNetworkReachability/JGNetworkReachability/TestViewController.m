@@ -11,7 +11,7 @@
 
 #define CLog(format, ...) NSLog((@"%s Line:%zd " format), __PRETTY_FUNCTION__, __LINE__, ## __VA_ARGS__)
 
-@interface TestViewController () <JGNetworkReachabilityDelegate> {
+@interface TestViewController () {
     
 }
 
@@ -25,19 +25,11 @@
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     [self.view setBackgroundColor:[UIColor lightGrayColor]];
     
-    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkReachabilityStatusChange:) name:JGNetworkReachabilityDidChangeNotification object:nil];
-    if (self.navigationController.viewControllers.count % 2) {
+    __weak typeof(self) weakSelf = self;
+    [[JGNetworkReachability sharedInstance] addStatusObserver:self action:^(JGNetworkReachabilityStatus status) {
         
-        __weak typeof(self) weakSelf = self;
-        [[JGNetworkReachability sharedInstance] addObserver:self reachabilityStatusChange:^(JGNetworkReachabilityStatus status) {
-            
-            NSLog(@"Observer=>%@ : %@", weakSelf.title, [[JGNetworkReachability sharedInstance] reachabilityStatusString]);
-        }];
-    }
-    else {
-        
-        [[JGNetworkReachability sharedInstance] addDelegate:self];
-    }
+        CLog(@"Observer=>%@ : %@", weakSelf.title, [[JGNetworkReachability sharedInstance] reachabilityStatusString]);
+    }];
 }
 
 - (void)viewDidAppear:(BOOL)animated {
@@ -53,13 +45,13 @@
 
 - (void)dealloc {
     
-    [[JGNetworkReachability sharedInstance] removeObserver:self];
+    CLog();
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)touchesBegan:(NSSet<UITouch *> *)touches withEvent:(UIEvent *)event {
     
-    NSLog(@"Touch=>%@ : %@", self.title, [[JGNetworkReachability sharedInstance] reachabilityStatusString]);
+    CLog(@"Touch=>%@ : %@", self.title, [[JGNetworkReachability sharedInstance] reachabilityStatusString]);
     
     TestViewController *ctr = [[TestViewController alloc] init];
     if (self.navigationController) {
@@ -73,18 +65,6 @@
             
         }];
     }
-}
-
-#pragma mark - Notification
-- (void)networkReachabilityStatusChange:(NSNotification *)notification {
-    
-    NSLog(@"Notification=> %@ : %@", self.title, [[JGNetworkReachability sharedInstance] reachabilityStatusString]);
-}
-
-#pragma mark - JGNetworkReachabilityDelegate
-- (void)networkReachability:(JGNetworkReachability *)networkReachability didChangeStatus:(JGNetworkReachabilityStatus)status {
-    
-    NSLog(@"Delegate=>%@ : %@", self.title, [[JGNetworkReachability sharedInstance] reachabilityStatusString]);
 }
 
 @end
