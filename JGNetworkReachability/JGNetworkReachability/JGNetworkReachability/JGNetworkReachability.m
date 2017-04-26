@@ -47,6 +47,7 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
 @property (nonatomic, assign, readonly) BOOL runningSchedule;
 
 @property (nonatomic, strong, readonly) NSMapTable *statusBlocks;
+@property (nonatomic, strong, readonly) NSMapTable *statusSelectors;
 
 @end
 
@@ -73,6 +74,7 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
     if (self) {
         
         _statusBlocks = [[NSMapTable alloc] initWithKeyOptions:NSPointerFunctionsWeakMemory valueOptions:NSPointerFunctionsStrongMemory capacity:0];
+        _statusSelectors = [[NSMapTable alloc] initWithKeyOptions:NSPointerFunctionsWeakMemory valueOptions:NSPointerFunctionsStrongMemory capacity:0];
         
         //创建零地址，0.0.0.0的地址表示查询本机的网络连接状态
 #if (defined(__IPHONE_OS_VERSION_MIN_REQUIRED) && __IPHONE_OS_VERSION_MIN_REQUIRED >= 90000) || (defined(__MAC_OS_X_VERSION_MIN_REQUIRED) && __MAC_OS_X_VERSION_MIN_REQUIRED >= 101100)
@@ -150,15 +152,49 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
     }
 }
 
+- (void)removeStatusObserver:(id)observer {
+    
+    if (observer) {
+        
+        [self.statusBlocks removeObjectForKey:observer];
+    }
+}
+
+- (void)addStatusTarget:(id)observer selector:(SEL)selector {
+    
+    if (observer && selector) {
+        
+        [self.statusSelectors setObject:NSStringFromSelector(selector) forKey:observer];
+    }
+}
+
+- (void)removeStatusTarget:(id)observer {
+    
+    if (observer) {
+        
+        [self.statusSelectors removeObjectForKey:observer];
+    }
+}
+
 - (void)notifyReachabilityStatusChange {
     
-    // Observer
+    // Block
     for (id obj in self.statusBlocks.objectEnumerator.allObjects) {
         
         JGNetworkReachabilityStatusChangeAction action = obj;
         if (action) {
             
             action(self.reachabilityStatus);
+        }
+    }
+    
+    // Selector
+    for (id obj in self.statusSelectors.keyEnumerator.allObjects) {
+        
+        SEL selector = NSSelectorFromString([self.statusSelectors objectForKey:obj]);
+        if (selector) {
+            
+            [obj performSelector:selector withObject:self afterDelay:0];
         }
     }
 }

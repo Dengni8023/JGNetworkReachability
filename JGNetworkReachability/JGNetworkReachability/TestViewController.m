@@ -13,6 +13,8 @@
 
 @interface TestViewController () {
     
+    // 内存测试使用
+    NSString *testString;
 }
 
 @end
@@ -25,17 +27,38 @@
     [self setEdgesForExtendedLayout:UIRectEdgeNone];
     [self.view setBackgroundColor:[UIColor lightGrayColor]];
     
-    __weak typeof(self) weakSelf = self;
-    [[JGNetworkReachability sharedInstance] addStatusObserver:self action:^(JGNetworkReachabilityStatus status) {
+    if (self.navigationController.viewControllers.count % 3 == 0) {
+    
+        __weak typeof(self) weakSelf = self;
+        [[JGNetworkReachability sharedInstance] addStatusObserver:self action:^(JGNetworkReachabilityStatus status) {
+            
+            testString = [weakSelf.title stringByAppendingString:[[JGNetworkReachability sharedInstance] reachabilityStatusString]];
+            CLog(@"%@", testString);
+            CLog(@"Observer=>%@ : %@", weakSelf.title, [[JGNetworkReachability sharedInstance] reachabilityStatusString]);
+        }];
+    }
+    else if (self.navigationController.viewControllers.count % 3 == 1) {
         
-        CLog(@"Observer=>%@ : %@", weakSelf.title, [[JGNetworkReachability sharedInstance] reachabilityStatusString]);
-    }];
+        [[JGNetworkReachability sharedInstance] addStatusTarget:self selector:@selector(networkStatusChanged)];
+    }
+    else {
+        
+        [[JGNetworkReachability sharedInstance] addStatusTarget:self selector:@selector(networkStatusChanged:object:)];
+    }
 }
 
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
     
     [self setTitle:[NSString stringWithFormat:@"Ctr_%zd", self.navigationController.viewControllers.count]];
+    testString = [[NSString alloc] initWithString:self.title];
+}
+
+- (void)viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    
+#warning Block memory test !
+    [[JGNetworkReachability sharedInstance] removeStatusObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -65,6 +88,17 @@
             
         }];
     }
+}
+
+- (void)networkStatusChanged {
+    
+    CLog(@"Selector=>%@ : %@", self.title, [[JGNetworkReachability sharedInstance] reachabilityStatusString]);
+}
+
+- (void)networkStatusChanged:(id)sender object:(id)obj {
+    
+    CLog(@"%@, %@", sender, obj);
+    CLog(@"Selector=>%@ : %@", self.title, [[JGNetworkReachability sharedInstance] reachabilityStatusString]);
 }
 
 @end

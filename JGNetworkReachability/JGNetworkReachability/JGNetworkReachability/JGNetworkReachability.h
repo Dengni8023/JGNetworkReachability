@@ -67,6 +67,32 @@ typedef void (^JGNetworkReachabilityStatusChangeAction)(JGNetworkReachabilitySta
  */
 - (void)addStatusObserver:(id)observer action:(nullable JGNetworkReachabilityStatusChangeAction)notification;
 
+/**
+ 移除状态监听block，非必需
+ addStatusObserver:action: 调用时block内部不存在内存问题时observer内存释放时会自动移除；
+ addStatusObserver:action: 调用时block内部存在内存问题时observer内存释放时必须手动调用本接口移除监听
+
+ @param observer 监听接收者
+ */
+- (void)removeStatusObserver:(id)observer;
+
+/**
+ 状态变化监听处理，可添加多个监听者
+ selector定义带单个可选参数，执行时参数类型 JGNetworkReachability
+ selector定义多个参数执行时只第一参数有效，其他参数无效
+ 
+ @param observer 监听接收者
+ @param selector 监听处理selector
+ */
+- (void)addStatusTarget:(id)observer selector:(SEL)selector;
+
+/**
+ 移除状态监听selector，非必需，observer内存释放时会自动移除
+ 
+ @param observer 监听接收者
+ */
+- (void)removeStatusTarget:(id)observer;
+
 @end
 
 NS_ASSUME_NONNULL_END
