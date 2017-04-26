@@ -65,7 +65,7 @@ typedef void (^JGNetworkReachabilityStatusChangeAction)(JGNetworkReachabilitySta
  @param observer 监听接收者
  @param notification 监听处理block
  */
-- (void)addStatusObserver:(id)observer action:(nullable JGNetworkReachabilityStatusChangeAction)notification;
+- (void)addObserver:(id)observer action:(nullable JGNetworkReachabilityStatusChangeAction)notification;
 
 /**
  移除状态监听block，非必需
@@ -74,7 +74,7 @@ typedef void (^JGNetworkReachabilityStatusChangeAction)(JGNetworkReachabilitySta
 
  @param observer 监听接收者
  */
-- (void)removeStatusObserver:(id)observer;
+- (void)removeActionWithObserver:(id)observer;
 
 /**
  状态变化监听处理，可添加多个监听者
@@ -84,14 +84,14 @@ typedef void (^JGNetworkReachabilityStatusChangeAction)(JGNetworkReachabilitySta
  @param observer 监听接收者
  @param selector 监听处理selector
  */
-- (void)addStatusTarget:(id)observer selector:(SEL)selector;
+- (void)addObserver:(id)observer selector:(SEL)selector;
 
 /**
  移除状态监听selector，非必需，observer内存释放时会自动移除
  
  @param observer 监听接收者
  */
-- (void)removeStatusTarget:(id)observer;
+- (void)removeSelectorWithObserver:(id)observer;
 
 @end
 

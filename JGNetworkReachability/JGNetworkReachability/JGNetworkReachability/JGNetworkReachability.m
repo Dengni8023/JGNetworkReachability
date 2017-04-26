@@ -144,7 +144,7 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
     _runningSchedule = !SCNetworkReachabilityUnscheduleFromRunLoop(self.reachabilityRef, CFRunLoopGetMain(), kCFRunLoopCommonModes);
 }
 
-- (void)addStatusObserver:(id)observer action:(JGNetworkReachabilityStatusChangeAction)notification {
+- (void)addObserver:(id)observer action:(JGNetworkReachabilityStatusChangeAction)notification {
     
     if (observer && notification) {
         
@@ -152,7 +152,7 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
     }
 }
 
-- (void)removeStatusObserver:(id)observer {
+- (void)removeActionWithObserver:(id)observer {
     
     if (observer) {
         
@@ -160,7 +160,7 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
     }
 }
 
-- (void)addStatusTarget:(id)observer selector:(SEL)selector {
+- (void)addObserver:(id)observer selector:(SEL)selector {
     
     if (observer && selector) {
         
@@ -168,7 +168,7 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
     }
 }
 
-- (void)removeStatusTarget:(id)observer {
+- (void)removeSelectorWithObserver:(id)observer {
     
     if (observer) {
         

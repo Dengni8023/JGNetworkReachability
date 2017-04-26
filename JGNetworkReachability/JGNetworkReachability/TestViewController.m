@@ -30,7 +30,7 @@
     if (self.navigationController.viewControllers.count % 3 == 0) {
     
         __weak typeof(self) weakSelf = self;
-        [[JGNetworkReachability sharedInstance] addStatusObserver:self action:^(JGNetworkReachabilityStatus status) {
+        [[JGNetworkReachability sharedInstance] addObserver:self action:^(JGNetworkReachabilityStatus status) {
             
             testString = [weakSelf.title stringByAppendingString:[[JGNetworkReachability sharedInstance] reachabilityStatusString]];
             CLog(@"%@", testString);
@@ -39,11 +39,11 @@
     }
     else if (self.navigationController.viewControllers.count % 3 == 1) {
         
-        [[JGNetworkReachability sharedInstance] addStatusTarget:self selector:@selector(networkStatusChanged)];
+        [[JGNetworkReachability sharedInstance] addObserver:self selector:@selector(networkStatusChanged)];
     }
     else {
         
-        [[JGNetworkReachability sharedInstance] addStatusTarget:self selector:@selector(networkStatusChanged:object:)];
+        [[JGNetworkReachability sharedInstance] addObserver:self selector:@selector(networkStatusChanged:object:)];
     }
 }
 
@@ -58,7 +58,7 @@
     [super viewWillDisappear:animated];
     
 #warning Block memory test !
-    [[JGNetworkReachability sharedInstance] removeStatusObserver:self];
+    [[JGNetworkReachability sharedInstance] removeActionWithObserver:self];
 }
 
 - (void)didReceiveMemoryWarning {
