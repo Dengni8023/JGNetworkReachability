@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "JGNetworkReachability"
-  s.version      = "0.0.2"
+  s.version      = "0.0.3"
   s.summary      = "iOS实时网络监测，支持多Block、多Selector回调监听."
 
   # This description is used to generate tags and improve search results.
@@ -90,7 +90,7 @@ Pod::Spec.new do |s|
   #  Not including the public_header_files will make all headers public.
   #
 
-  s.source_files  = "JGNetworkReachability/JGNetworkReachability/JGNetworkReachability/**/*.{h,m}"
+  s.source_files  = "SourceFiles/*.{h,m}"
   # s.exclude_files = "Classes/Exclude"
 
   # s.public_header_files = "Classes/**/*.h"

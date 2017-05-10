@@ -13,7 +13,7 @@
 		D4A9A9661E6922A100442F7B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A9A9641E6922A100442F7B /* Main.storyboard */; };
 		D4A9A9681E6922A100442F7B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4A9A9671E6922A100442F7B /* Assets.xcassets */; };
 		D4A9A96B1E6922A100442F7B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4A9A9691E6922A100442F7B /* LaunchScreen.storyboard */; };
-		D4FA16691E7103940052A4E0 /* JGNetworkReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FA16681E7103940052A4E0 /* JGNetworkReachability.m */; };
+		D4BBAA9A1EC4446900699D9C /* JGNetworkReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D4BBAA991EC4446900699D9C /* JGNetworkReachability.m */; };
 		D4FA166C1E7133D70052A4E0 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4FA166B1E7133D70052A4E0 /* TestViewController.m */; };
 /* End PBXBuildFile section */
 
@@ -28,8 +28,8 @@
 		D4A9A9671E6922A100442F7B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		D4A9A96A1E6922A100442F7B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4A9A96C1E6922A100442F7B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		D4FA16671E7103940052A4E0 /* JGNetworkReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGNetworkReachability.h; sourceTree = "<group>"; };
-		D4FA16681E7103940052A4E0 /* JGNetworkReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGNetworkReachability.m; sourceTree = "<group>"; };
+		D4BBAA981EC4446900699D9C /* JGNetworkReachability.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JGNetworkReachability.h; sourceTree = "<group>"; };
+		D4BBAA991EC4446900699D9C /* JGNetworkReachability.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGNetworkReachability.m; sourceTree = "<group>"; };
 		D4FA166A1E7133D70052A4E0 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		D4FA166B1E7133D70052A4E0 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,7 +64,7 @@
 		D4A9A95A1E6922A100442F7B /* JGNetworkReachability */ = {
 			isa = PBXGroup;
 			children = (
-				D4FA16661E7103820052A4E0 /* JGNetworkReachability */,
+				D4BBAA971EC4446900699D9C /* SourceFiles */,
 				D4A9A95E1E6922A100442F7B /* AppDelegate.h */,
 				D4A9A95F1E6922A100442F7B /* AppDelegate.m */,
 				D4FA166A1E7133D70052A4E0 /* TestViewController.h */,
@@ -88,13 +88,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		D4FA16661E7103820052A4E0 /* JGNetworkReachability */ = {
+		D4BBAA971EC4446900699D9C /* SourceFiles */ = {
 			isa = PBXGroup;
 			children = (
-				D4FA16671E7103940052A4E0 /* JGNetworkReachability.h */,
-				D4FA16681E7103940052A4E0 /* JGNetworkReachability.m */,
+				D4BBAA981EC4446900699D9C /* JGNetworkReachability.h */,
+				D4BBAA991EC4446900699D9C /* JGNetworkReachability.m */,
 			);
-			path = JGNetworkReachability;
+			name = SourceFiles;
+			path = ../../SourceFiles;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -170,8 +171,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				D4A9A9631E6922A100442F7B /* ViewController.m in Sources */,
+				D4BBAA9A1EC4446900699D9C /* JGNetworkReachability.m in Sources */,
 				D4A9A9601E6922A100442F7B /* AppDelegate.m in Sources */,
-				D4FA16691E7103940052A4E0 /* JGNetworkReachability.m in Sources */,
 				D4A9A95D1E6922A100442F7B /* main.m in Sources */,
 				D4FA166C1E7133D70052A4E0 /* TestViewController.m in Sources */,
 			);
