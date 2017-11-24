@@ -2,9 +2,9 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:README.md">
+      location = "group:JGNetworkReachability.xcodeproj">
    </FileRef>
    <FileRef
-      location = "group:JGNetworkReachability/JGNetworkReachability.xcodeproj">
+      location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>
