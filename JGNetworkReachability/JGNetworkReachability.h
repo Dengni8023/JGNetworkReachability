@@ -16,4 +16,8 @@ FOUNDATION_EXPORT const unsigned char JGNetworkReachabilityVersionString[];
 
 // In this header, you should import all the public headers of your framework using statements like #import <JGNetworkReachability/PublicHeader.h>
 
+#if __has_include(<JGNetworkReachability/JGNetworkReachabilityImpl.h>)
+#import <JGNetworkReachability/JGNetworkReachabilityImpl.h>
+#else
 #import "JGNetworkReachabilityImpl.h"
+#endif

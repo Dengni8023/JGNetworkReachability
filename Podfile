@@ -14,7 +14,7 @@ platform :ios, '8.0'
 target "JGNetworkReachability" do
     
     # JGSourceBase
-    pod 'JGSourceBase', "~> 0.0.1"
+    pod 'JGSourceBase', "~> 0.0.2"
     
     # project
     project "JGNetworkReachability.xcodeproj"
