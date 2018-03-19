@@ -1,12 +1,19 @@
 PODS:
-  - JGSourceBase (0.0.2)
+  - JGNetworkReachability (0.0.5):
+    - JGSourceBase (~> 0.0.1)
+  - JGSourceBase (0.0.3)
 
 DEPENDENCIES:
-  - JGSourceBase (~> 0.0.2)
+  - JGNetworkReachability (from `.`)
+
+EXTERNAL SOURCES:
+  JGNetworkReachability:
+    :path: .
 
 SPEC CHECKSUMS:
-  JGSourceBase: f2fbf6b122fac4bca3f12edf549cc9f4e1f3c96a
+  JGNetworkReachability: fa058adc234862ebc986ba7cece511f59a43bf90
+  JGSourceBase: 2dd7075510324c093498442d5c29f7a332df6882
 
-PODFILE CHECKSUM: 52324475db7db53dfdc9d959f6b01adb4a3ec4e7
+PODFILE CHECKSUM: abb348cda047912ada5a2e73c3b7518f32607ebd
 
-COCOAPODS: 1.3.1
+COCOAPODS: 1.4.0

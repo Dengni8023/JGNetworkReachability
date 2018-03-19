@@ -10,21 +10,14 @@ workspace "JGNetworkReachability"
 # platform
 platform :ios, '8.0'
 
-# JGNetworkReachability
-target "JGNetworkReachability" do
-    
-    # JGSourceBase
-    pod 'JGSourceBase', "~> 0.0.2"
-    
-    # project
-    project "JGNetworkReachability.xcodeproj"
-end
-
 # Demo中必须保留，即使内部无任何Pod依赖，否则Demo中无法使用JGAlertController依赖的Pod库
 # JGNetworkReachabilityDemo
 target "JGNetworkReachabilityDemo" do
     
+    # Local
+    pod 'JGNetworkReachability', :path => "."
+    
     # project
-    project "JGNetworkReachability.xcodeproj"
+    project "JGNetworkReachabilityDemo/JGNetworkReachabilityDemo.xcodeproj"
 end
 

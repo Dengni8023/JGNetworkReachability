@@ -32,6 +32,11 @@ typedef NS_ENUM(NSInteger, JGNetworkReachabilityWWAN) {
 
 typedef void (^JGNetworkReachabilityStatusChangeAction)(JGNetworkReachabilityStatus status);
 
+FOUNDATION_EXTERN NSNotificationName const JGNetworkReachabilityStatusChangedNotification;
+
+typedef NSString *JGNetworkReachabilityNotificationKey NS_EXTENSIBLE_STRING_ENUM;
+FOUNDATION_EXTERN JGNetworkReachabilityNotificationKey const JGNetworkReachabilityNotificationstatusKey;
+
 @interface JGNetworkReachability : NSObject
 
 /** 网络连接类型 */

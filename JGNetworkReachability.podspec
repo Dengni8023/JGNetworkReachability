@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
 s.name          = "JGNetworkReachability"
-s.version       = "0.0.5"
+s.version       = "0.0.6"
 
 s.summary       = "iOS 弹出系统Alert通用方法定义"
 s.description   = <<-DESC
@@ -12,7 +12,7 @@ s.description   = <<-DESC
 	功能包括：
 	1、支持多Block回调监听
 	2、支持多Selector回调监听
-	3、支持通知回调监听
+	3、支持通知中心监听
 DESC
 
 s.homepage      = "https://github.com/dengni8023/JGNetworkReachability"

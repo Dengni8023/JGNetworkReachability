@@ -13,6 +13,9 @@
 #import <netinet6/in6.h>
 #import "JGSourceBase.h"
 
+NSNotificationName const JGNetworkReachabilityStatusChangedNotification = @"JGNetworkReachabilityStatusChangedNotification";
+JGNetworkReachabilityNotificationKey const JGNetworkReachabilityNotificationstatusKey = @"JGNetworkReachabilityNotificationstatusKey";
+
 typedef void (^JGNetworkReachabilityStatusBlock)(void);
 
 static void JGReachabilityStatusChange(SCNetworkReachabilityFlags flags, JGNetworkReachabilityStatusBlock block) {
@@ -199,6 +202,9 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
             [obj performSelector:selector withObject:self afterDelay:0];
         }
     }
+    
+    // Notification Center
+    [[NSNotificationCenter defaultCenter] postNotificationName:JGNetworkReachabilityStatusChangedNotification object:self userInfo:@{JGNetworkReachabilityNotificationstatusKey : @(self.reachabilityStatus)}];
 }
 
 #pragma mark - Getter
