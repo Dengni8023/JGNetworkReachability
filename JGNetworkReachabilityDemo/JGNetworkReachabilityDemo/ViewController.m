@@ -52,48 +52,48 @@
 
 - (void)initDatas {
     
-    JGWeak(self);
+    JGSCWeak(self);
     _demoData = @[
                   JGDemoTableSectionMake(@"",
                                          @[
                                            JGDemoTableRowMakeBlock(@"Block", ^(JGDemoTableRowData * _Nonnull rowData) {
                       
-                      JGStrong(self);
+                      JGSCStrong(self);
                       ReachabilityStatusViewController *vcT = [[ReachabilityStatusViewController alloc] init];
                       vcT.observerType = StatusObserverTypeBlock;
                       [self.navigationController pushViewController:vcT animated:YES];
                   }),
                                            JGDemoTableRowMakeBlock(@"Selector", ^(JGDemoTableRowData * _Nonnull rowData) {
                       
-                      JGStrong(self);
+                      JGSCStrong(self);
                       ReachabilityStatusViewController *vcT = [[ReachabilityStatusViewController alloc] init];
                       vcT.observerType = StatusObserverTypeSelector;
                       [self.navigationController pushViewController:vcT animated:YES];
                   }),
                                            JGDemoTableRowMakeBlock(@"Selector Value 1", ^(JGDemoTableRowData * _Nonnull rowData) {
                       
-                      JGStrong(self);
+                      JGSCStrong(self);
                       ReachabilityStatusViewController *vcT = [[ReachabilityStatusViewController alloc] init];
                       vcT.observerType = StatusObserverTypeSelectorValue1;
                       [self.navigationController pushViewController:vcT animated:YES];
                   }),
                                            JGDemoTableRowMakeBlock(@"Selector Value 2", ^(JGDemoTableRowData * _Nonnull rowData) {
                       
-                      JGStrong(self);
+                      JGSCStrong(self);
                       ReachabilityStatusViewController *vcT = [[ReachabilityStatusViewController alloc] init];
                       vcT.observerType = StatusObserverTypeSelectorValue2;
                       [self.navigationController pushViewController:vcT animated:YES];
                   }),
                                            JGDemoTableRowMakeBlock(@"Selector Value 3", ^(JGDemoTableRowData * _Nonnull rowData) {
                       
-                      JGStrong(self);
+                      JGSCStrong(self);
                       ReachabilityStatusViewController *vcT = [[ReachabilityStatusViewController alloc] init];
                       vcT.observerType = StatusObserverTypeSelectorValue3;
                       [self.navigationController pushViewController:vcT animated:YES];
                   }),
                                            JGDemoTableRowMakeBlock(@"Notification", ^(JGDemoTableRowData * _Nonnull rowData) {
                       
-                      JGStrong(self);
+                      JGSCStrong(self);
                       ReachabilityStatusViewController *vcT = [[ReachabilityStatusViewController alloc] init];
                       vcT.observerType = StatusObserverTypeNotification;
                       [self.navigationController pushViewController:vcT animated:YES];
@@ -106,17 +106,17 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    JGEnableLogWithMode(JGLogModeFunc);
+    JGSCEnableLogWithMode(JGSCLogModeFunc);
     self.title = NSStringFromClass([self class]);
     
-    self.clearsSelectionOnViewWillAppear = NO;
+    self.clearsSelectionOnViewWillAppear = YES;
     //self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.tableView.rowHeight = 44;
     self.tableView.sectionHeaderHeight = 48;
     self.tableView.tableFooterView = [[UIView alloc] init];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:JGReuseIdentifier(UITableViewCell)];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:JGSCReuseIdentifier(UITableViewCell)];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -135,7 +135,7 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JGReuseIdentifier(UITableViewCell) forIndexPath:indexPath];
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JGSCReuseIdentifier(UITableViewCell) forIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
     cell.textLabel.text = self.demoData[indexPath.section].rows[indexPath.row].title;

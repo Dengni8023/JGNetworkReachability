@@ -2,7 +2,7 @@
 Pod::Spec.new do |s|
 
 s.name          = "JGNetworkReachability"
-s.version       = "0.0.6"
+s.version       = "0.0.7"
 
 s.summary       = "iOS 弹出系统Alert通用方法定义"
 s.description   = <<-DESC
@@ -32,6 +32,7 @@ s.platforms     = {
 	:ios => 8.0,
 }
 s.source_files  = "JGNetworkReachability/*.{h,m}"
+s.public_header_files  = "JGNetworkReachability/*.h"
 # s.resource    = "JGNetworkReachability/JGNetworkReachability.bundle"
 
 # s.framework  = "SomeFramework"
@@ -44,7 +45,7 @@ s.source_files  = "JGNetworkReachability/*.{h,m}"
 # s.dependency "SDWebImage/GIF"
 # s.dependency "SVProgressHUD", "~> 2.1"
 
-s.dependency "JGSourceBase", "~> 0.0.1"
+s.dependency "JGSourceBase", "0.0.5"
 
 s.requires_arc = true
 

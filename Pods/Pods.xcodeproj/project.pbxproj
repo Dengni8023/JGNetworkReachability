@@ -7,24 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		0354A0B167268FA889ED66CD77E61F88 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D1EF8AA7D56E5FBAB09116917BD1E6 /* Foundation.framework */; };
-		0C0123CA4BD7F81E5E59362B8EE59F31 /* JGSourceBase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 1E275884424DE775E43A91D15083499B /* JGSourceBase-dummy.m */; };
-		24A0D9B8B0BE5E034CA083122A16BBCF /* Pods-JGNetworkReachabilityDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 12C85B713E68D45EA035116AEB436626 /* Pods-JGNetworkReachabilityDemo-dummy.m */; };
-		44A5735393D66666E318E0D5DA3285AD /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D1EF8AA7D56E5FBAB09116917BD1E6 /* Foundation.framework */; };
-		457F6FD420D359FF5B768EC7ED0935EC /* JGNetworkReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = EF172F5CDAA0D25A21DD728474382BCB /* JGNetworkReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		48A0F95396D4E5E5FF5DCF873A45895D /* JGSourceCommon.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AAB75276865D14823311893AD8064DA /* JGSourceCommon.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		514C29F739D746AC93464E2C27A0BDE9 /* JGSourceResource.m in Sources */ = {isa = PBXBuildFile; fileRef = 8A612ECD12C0027FDAD84850FFCFB62F /* JGSourceResource.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
-		60C9053DF8DEF2E8C688B4A629703CE0 /* JGNetworkReachabilityImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = 34003CDBE09294F2D81EE1A2E7FF3766 /* JGNetworkReachabilityImpl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		6384AB6D1F8A8E49E054F57A0E8DAFFB /* JGSourceResource.h in Headers */ = {isa = PBXBuildFile; fileRef = 2EE9528C6E4D27FF9AAD70D9E74272A2 /* JGSourceResource.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		8499CE28744F2B4E2F6D1C8B9C186F8D /* JGNetworkReachabilityImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = 35EA8287FC844AF116E30704CE2164A2 /* JGNetworkReachabilityImpl.m */; settings = {COMPILER_FLAGS = "-w -Xanalyzer -analyzer-disable-all-checks"; }; };
+		0FA33C2F9FC979B3130E1937DCAEDDB4 /* JGSCRuntime.m in Sources */ = {isa = PBXBuildFile; fileRef = 6084BC21B2DEED4A5AC0AD550EC8E7F0 /* JGSCRuntime.m */; };
+		127BD85EE3101770E6F62EBA5B6D66AA /* JGSCCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = 6BFD753C624D957C91AEDEE365EB48A7 /* JGSCCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		24A0D9B8B0BE5E034CA083122A16BBCF /* Pods-JGNetworkReachabilityDemo-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 250626C6D7A4AF098CDEEE944D6FF6E2 /* Pods-JGNetworkReachabilityDemo-dummy.m */; };
+		27E0B775FC4B4DDEE80F284128896AA5 /* JGNRReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 08A2CFB48AE33AABD3321EEF39715C00 /* JGNRReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		2B4D75C1AC8DF93BE0361E3C05FD911C /* JGNetworkReachability-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 6B5F2C56C85A2DC33FCF4D4443F6187F /* JGNetworkReachability-dummy.m */; };
+		2EF41673826594F7959A8F2C89221B07 /* JGSourceBase-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D537807A89D049709B740234170E2C4B /* JGSourceBase-dummy.m */; };
+		3A4B0CF64E9B9426F333162EC441A231 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9968CF35F7281F18B46B7AD408B7EB7F /* Foundation.framework */; };
+		3A8A2495DE2AC80775F4F8CF2823704E /* JGSourceBase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 5160D7E00DC90A6FF2A4D1A5C59E5418 /* JGSourceBase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3C92B9CA86DA149E52513C1AFB46AF71 /* JGSCWeakStrongProperty.h in Headers */ = {isa = PBXBuildFile; fileRef = CC165A75A174EB4BA28CFC6949FC6D31 /* JGSCWeakStrongProperty.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		4FB6BCA4F3B1456EA06F9D7EE616A374 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9968CF35F7281F18B46B7AD408B7EB7F /* Foundation.framework */; };
+		55D6C7772BB33C077D2C17828CCFEA06 /* JGNRReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = CE775FDFAB7BB45E59256738334B4C6F /* JGNRReachability.m */; };
+		64B6253D1B10916D66FCC1338584C27F /* JGNetworkReachability-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E0ED9D4142C73BD8BD1DC9003246EDBC /* JGNetworkReachability-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6DD6BF19B9CFDA1F702C5AA2389A11C7 /* JGSCLog.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F6D1FFCFEC67B7A76D4FC7BA0A3C91E /* JGSCLog.m */; };
 		A059CF9B5CB3FD12A6E393A6EAE7B669 /* JGSourceBase.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 1A32CF0BF3AB34FA1E327059490DECC9 /* JGSourceBase.framework */; };
-		AB36CAD52D388685B97E10E4294C6FC1 /* JGNetworkReachability-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 0200F541C79D58BDE02CAC604D179F1A /* JGNetworkReachability-dummy.m */; };
-		AECC64B111DB2AC6FF6B2CD7B1BC091E /* JGNetworkReachability-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = E7620D588877CD4604D9679DBC653260 /* JGNetworkReachability-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		B7058E729DE9A305D1116F530C56EAB4 /* Pods-JGNetworkReachabilityDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 2F26CAF971D07040261297D56381D918 /* Pods-JGNetworkReachabilityDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		CA2D7317628CE8465EA28A765CB2CCA1 /* JGSourceCommon.h in Headers */ = {isa = PBXBuildFile; fileRef = A1BDB92FF58A644CCC63DBF30F9F7355 /* JGSourceCommon.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EB797B01602C05C298BEE5991D489E15 /* JGSourceBase.h in Headers */ = {isa = PBXBuildFile; fileRef = EC28384EF8D710D954F27FC49D4CC0C4 /* JGSourceBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		EFA6135E9398580A9AB685876E5F5618 /* JGSourceBase-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = BBF1A0F83012D32651EF1D8DEAAEBF72 /* JGSourceBase-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		FCF99BA889A6A522C1DC9B5BD558C691 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 15D1EF8AA7D56E5FBAB09116917BD1E6 /* Foundation.framework */; };
+		AAE227097D09E436A87EC8D7C3EC33B2 /* JGSCLog.h in Headers */ = {isa = PBXBuildFile; fileRef = FCAC4572431B5787750F70C1071F3E1F /* JGSCLog.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		ACEF256DC33421ACE6092A538FC48847 /* JGSCRuntime.h in Headers */ = {isa = PBXBuildFile; fileRef = 9C59254FA144E5ED433055DBEEDEA0F9 /* JGSCRuntime.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		B7058E729DE9A305D1116F530C56EAB4 /* Pods-JGNetworkReachabilityDemo-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 9AF0B3A4EEF821EED2F39509BF399244 /* Pods-JGNetworkReachabilityDemo-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EBAB564E0A8079A484F3ED036B1537CC /* JGSourceBase.h in Headers */ = {isa = PBXBuildFile; fileRef = 64019A7091CA09F2276BB527B7093CF0 /* JGSourceBase.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EDEF923249E60ABD960F5CE4FF58B944 /* JGNetworkReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = 2CE2BF0DE6025C4F568C41FFCF400248 /* JGNetworkReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		EEBD516D9238F8DF74E57CCBD5C07761 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9968CF35F7281F18B46B7AD408B7EB7F /* Foundation.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -52,45 +54,47 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		0200F541C79D58BDE02CAC604D179F1A /* JGNetworkReachability-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JGNetworkReachability-dummy.m"; sourceTree = "<group>"; };
-		03EF56BA0BF09DFD2E0CF0DC597D3E18 /* JGNetworkReachability.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JGNetworkReachability.xcconfig; sourceTree = "<group>"; };
-		08F0F41B7233FA62C029FE75E75C87AD /* JGSourceBase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JGSourceBase-prefix.pch"; sourceTree = "<group>"; };
-		0992063779FF3233A70341FFA4DBBDD6 /* Pods-JGNetworkReachabilityDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JGNetworkReachabilityDemo-resources.sh"; sourceTree = "<group>"; };
+		00678434CFBF6D12719A182D8CD90265 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		08A2CFB48AE33AABD3321EEF39715C00 /* JGNRReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGNRReachability.h; path = JGNetworkReachability/JGNRReachability.h; sourceTree = "<group>"; };
+		0913CD692D61D299BEE438B6C67C1286 /* JGNetworkReachability.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = JGNetworkReachability.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		0E62B7F9D69527C59CA7C6D3AE359042 /* JGSourceBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JGSourceBase.framework; path = JGSourceBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		12C85B713E68D45EA035116AEB436626 /* Pods-JGNetworkReachabilityDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JGNetworkReachabilityDemo-dummy.m"; sourceTree = "<group>"; };
-		15D1EF8AA7D56E5FBAB09116917BD1E6 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
 		1A32CF0BF3AB34FA1E327059490DECC9 /* JGSourceBase.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JGSourceBase.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		1AAB75276865D14823311893AD8064DA /* JGSourceCommon.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGSourceCommon.m; path = JGSourceBase/JGSourceCommon.m; sourceTree = "<group>"; };
-		1B230D50E02497796FCF3E40A4712466 /* JGSourceBase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JGSourceBase.xcconfig; sourceTree = "<group>"; };
-		1E275884424DE775E43A91D15083499B /* JGSourceBase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JGSourceBase-dummy.m"; sourceTree = "<group>"; };
-		28669F3D6A1028471D2589FCAFBFAFED /* JGNetworkReachability-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JGNetworkReachability-prefix.pch"; sourceTree = "<group>"; };
-		2EE9528C6E4D27FF9AAD70D9E74272A2 /* JGSourceResource.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGSourceResource.h; path = JGSourceBase/JGSourceResource.h; sourceTree = "<group>"; };
-		2F26CAF971D07040261297D56381D918 /* Pods-JGNetworkReachabilityDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JGNetworkReachabilityDemo-umbrella.h"; sourceTree = "<group>"; };
-		34003CDBE09294F2D81EE1A2E7FF3766 /* JGNetworkReachabilityImpl.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGNetworkReachabilityImpl.h; path = JGNetworkReachability/JGNetworkReachabilityImpl.h; sourceTree = "<group>"; };
-		35EA8287FC844AF116E30704CE2164A2 /* JGNetworkReachabilityImpl.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGNetworkReachabilityImpl.m; path = JGNetworkReachability/JGNetworkReachabilityImpl.m; sourceTree = "<group>"; };
-		37B19AE30554399AA53F81EBED267E3B /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		3A66BA38A78D1DF277A834327A1C45C4 /* Pods-JGNetworkReachabilityDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JGNetworkReachabilityDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
-		436A4BCC7515AB1152CD946364822973 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		4536B06963B9168FD95D2F30B7F04087 /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
-		5995AB03E37058F6685CFFD0764362D7 /* JGSourceBase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = JGSourceBase.modulemap; sourceTree = "<group>"; };
+		250626C6D7A4AF098CDEEE944D6FF6E2 /* Pods-JGNetworkReachabilityDemo-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-JGNetworkReachabilityDemo-dummy.m"; sourceTree = "<group>"; };
+		2CE2BF0DE6025C4F568C41FFCF400248 /* JGNetworkReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGNetworkReachability.h; path = JGNetworkReachability/JGNetworkReachability.h; sourceTree = "<group>"; };
+		397F1476A21B752A97DFADA959A49E52 /* JGNetworkReachability.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JGNetworkReachability.modulemap; sourceTree = "<group>"; };
+		5160D7E00DC90A6FF2A4D1A5C59E5418 /* JGSourceBase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JGSourceBase-umbrella.h"; sourceTree = "<group>"; };
 		5A8BBDBB533019B9639819A69902C4EF /* JGNetworkReachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = JGNetworkReachability.framework; path = JGNetworkReachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		6197A6E7B8235C06FCFA27F9E6C8202A /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
-		691A3C4A6E61AA3401CC1039E389A94A /* Pods-JGNetworkReachabilityDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JGNetworkReachabilityDemo.release.xcconfig"; sourceTree = "<group>"; };
-		7141463EB2E324CB5FF35AA517BB395D /* JGNetworkReachability.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = JGNetworkReachability.modulemap; sourceTree = "<group>"; };
-		819A453B7F23CA06CECDAA0854B9D1CA /* JGNetworkReachability.podspec */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; path = JGNetworkReachability.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		8A612ECD12C0027FDAD84850FFCFB62F /* JGSourceResource.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGSourceResource.m; path = JGSourceBase/JGSourceResource.m; sourceTree = "<group>"; };
-		8C33021ECF77B6B6D6F97562199BC8BF /* Pods-JGNetworkReachabilityDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JGNetworkReachabilityDemo.debug.xcconfig"; sourceTree = "<group>"; };
-		92B99EC09EE37BCB0BD01D2284DD0FA4 /* Pods-JGNetworkReachabilityDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JGNetworkReachabilityDemo-frameworks.sh"; sourceTree = "<group>"; };
+		6084BC21B2DEED4A5AC0AD550EC8E7F0 /* JGSCRuntime.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGSCRuntime.m; path = JGSourceBase/JGSCRuntime.m; sourceTree = "<group>"; };
+		64019A7091CA09F2276BB527B7093CF0 /* JGSourceBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGSourceBase.h; path = JGSourceBase/JGSourceBase.h; sourceTree = "<group>"; };
+		6B5F2C56C85A2DC33FCF4D4443F6187F /* JGNetworkReachability-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JGNetworkReachability-dummy.m"; sourceTree = "<group>"; };
+		6BFD753C624D957C91AEDEE365EB48A7 /* JGSCCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGSCCommon.h; path = JGSourceBase/JGSCCommon.h; sourceTree = "<group>"; };
+		7759E0B670976F1D33445C7233B7671E /* JGNetworkReachability.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JGNetworkReachability.xcconfig; sourceTree = "<group>"; };
+		7C8D5A0181B1627F70E92A653051D7ED /* JGSourceBase.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = JGSourceBase.modulemap; sourceTree = "<group>"; };
+		7F6D1FFCFEC67B7A76D4FC7BA0A3C91E /* JGSCLog.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGSCLog.m; path = JGSourceBase/JGSCLog.m; sourceTree = "<group>"; };
+		8D313DB3DAE1D2E731EDF2676D8C357A /* JGSourceBase-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JGSourceBase-prefix.pch"; sourceTree = "<group>"; };
 		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
-		A1BDB92FF58A644CCC63DBF30F9F7355 /* JGSourceCommon.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGSourceCommon.h; path = JGSourceBase/JGSourceCommon.h; sourceTree = "<group>"; };
-		A71EF2632105A5A5A003803FFBD03CFA /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B639709E7C95BBD1EAB8DC735B07FFD8 /* Pods-JGNetworkReachabilityDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JGNetworkReachabilityDemo-acknowledgements.plist"; sourceTree = "<group>"; };
-		BBF1A0F83012D32651EF1D8DEAAEBF72 /* JGSourceBase-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JGSourceBase-umbrella.h"; sourceTree = "<group>"; };
-		C188B04C35A7B742D73F2E00E6F97439 /* Pods-JGNetworkReachabilityDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-JGNetworkReachabilityDemo.modulemap"; sourceTree = "<group>"; };
+		9968CF35F7281F18B46B7AD408B7EB7F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS11.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		9AC444AAE875D3BB7ED43FC248A294ED /* Pods-JGNetworkReachabilityDemo-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-JGNetworkReachabilityDemo-acknowledgements.plist"; sourceTree = "<group>"; };
+		9AF0B3A4EEF821EED2F39509BF399244 /* Pods-JGNetworkReachabilityDemo-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-JGNetworkReachabilityDemo-umbrella.h"; sourceTree = "<group>"; };
+		9C4C8C0B0B819B408D886F5AF310CE35 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		9C59254FA144E5ED433055DBEEDEA0F9 /* JGSCRuntime.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGSCRuntime.h; path = JGSourceBase/JGSCRuntime.h; sourceTree = "<group>"; };
+		9CAE559818393CF1A31316EC7573588C /* Pods-JGNetworkReachabilityDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JGNetworkReachabilityDemo.release.xcconfig"; sourceTree = "<group>"; };
+		A8B54B2AABDC72B7B089263EBB323BCC /* Pods-JGNetworkReachabilityDemo-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JGNetworkReachabilityDemo-frameworks.sh"; sourceTree = "<group>"; };
+		B7309CFBE101BD3C315868478F1A01D4 /* JGSourceBase.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = JGSourceBase.xcconfig; sourceTree = "<group>"; };
+		B940337D19F8F76D98A411B7CF9C2F27 /* Pods-JGNetworkReachabilityDemo-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-JGNetworkReachabilityDemo-acknowledgements.markdown"; sourceTree = "<group>"; };
+		C2F85CA298C871925623CCF71C82FD44 /* Pods-JGNetworkReachabilityDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-JGNetworkReachabilityDemo.debug.xcconfig"; sourceTree = "<group>"; };
+		C3C330431FF95B2742B199AD43B0D2FB /* JGNetworkReachability-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JGNetworkReachability-prefix.pch"; sourceTree = "<group>"; };
+		C52C23ABE6BAAFDF7E9FEE96057CFFFB /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; path = LICENSE; sourceTree = "<group>"; };
+		C6E9A2980A3CA7480047FC7056D85A87 /* Pods-JGNetworkReachabilityDemo.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-JGNetworkReachabilityDemo.modulemap"; sourceTree = "<group>"; };
 		CA50662875732CB49BC963F63B9CD485 /* Pods_JGNetworkReachabilityDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_JGNetworkReachabilityDemo.framework; path = "Pods-JGNetworkReachabilityDemo.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
-		E7620D588877CD4604D9679DBC653260 /* JGNetworkReachability-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JGNetworkReachability-umbrella.h"; sourceTree = "<group>"; };
-		EC28384EF8D710D954F27FC49D4CC0C4 /* JGSourceBase.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGSourceBase.h; path = JGSourceBase/JGSourceBase.h; sourceTree = "<group>"; };
-		EF172F5CDAA0D25A21DD728474382BCB /* JGNetworkReachability.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGNetworkReachability.h; path = JGNetworkReachability/JGNetworkReachability.h; sourceTree = "<group>"; };
+		CC165A75A174EB4BA28CFC6949FC6D31 /* JGSCWeakStrongProperty.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGSCWeakStrongProperty.h; path = JGSourceBase/JGSCWeakStrongProperty.h; sourceTree = "<group>"; };
+		CE775FDFAB7BB45E59256738334B4C6F /* JGNRReachability.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = JGNRReachability.m; path = JGNetworkReachability/JGNRReachability.m; sourceTree = "<group>"; };
+		D4DB7BCCE3437CF053ADA6C3A7EC83CD /* Pods-JGNetworkReachabilityDemo-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-JGNetworkReachabilityDemo-resources.sh"; sourceTree = "<group>"; };
+		D537807A89D049709B740234170E2C4B /* JGSourceBase-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "JGSourceBase-dummy.m"; sourceTree = "<group>"; };
+		E0ED9D4142C73BD8BD1DC9003246EDBC /* JGNetworkReachability-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "JGNetworkReachability-umbrella.h"; sourceTree = "<group>"; };
+		E8ACD16667CEF41018BB78F1CF03C16B /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; path = README.md; sourceTree = "<group>"; };
+		E8C277B24B93965DB6CC1EA1F876AB09 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FCAC4572431B5787750F70C1071F3E1F /* JGSCLog.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = JGSCLog.h; path = JGSourceBase/JGSCLog.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +102,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				44A5735393D66666E318E0D5DA3285AD /* Foundation.framework in Frameworks */,
+				EEBD516D9238F8DF74E57CCBD5C07761 /* Foundation.framework in Frameworks */,
 				A059CF9B5CB3FD12A6E393A6EAE7B669 /* JGSourceBase.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -107,7 +111,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FCF99BA889A6A522C1DC9B5BD558C691 /* Foundation.framework in Frameworks */,
+				3A4B0CF64E9B9426F333162EC441A231 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,70 +119,77 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0354A0B167268FA889ED66CD77E61F88 /* Foundation.framework in Frameworks */,
+				4FB6BCA4F3B1456EA06F9D7EE616A374 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		0A4BB2E77E2F815849B717C2E2A79853 /* Pod */ = {
+		025A99A7F065D31EBD95C7E1456AD82A /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				819A453B7F23CA06CECDAA0854B9D1CA /* JGNetworkReachability.podspec */,
-				4536B06963B9168FD95D2F30B7F04087 /* LICENSE */,
-				6197A6E7B8235C06FCFA27F9E6C8202A /* README.md */,
-			);
-			name = Pod;
-			sourceTree = "<group>";
-		};
-		2FFC678636C19EC754C392169FCC53CA /* iOS */ = {
-			isa = PBXGroup;
-			children = (
-				15D1EF8AA7D56E5FBAB09116917BD1E6 /* Foundation.framework */,
-			);
-			name = iOS;
-			sourceTree = "<group>";
-		};
-		62EB6EB35AC0F8C5F23EE78542E4FE5E /* Support Files */ = {
-			isa = PBXGroup;
-			children = (
-				37B19AE30554399AA53F81EBED267E3B /* Info.plist */,
-				7141463EB2E324CB5FF35AA517BB395D /* JGNetworkReachability.modulemap */,
-				03EF56BA0BF09DFD2E0CF0DC597D3E18 /* JGNetworkReachability.xcconfig */,
-				0200F541C79D58BDE02CAC604D179F1A /* JGNetworkReachability-dummy.m */,
-				28669F3D6A1028471D2589FCAFBFAFED /* JGNetworkReachability-prefix.pch */,
-				E7620D588877CD4604D9679DBC653260 /* JGNetworkReachability-umbrella.h */,
+				9C4C8C0B0B819B408D886F5AF310CE35 /* Info.plist */,
+				397F1476A21B752A97DFADA959A49E52 /* JGNetworkReachability.modulemap */,
+				7759E0B670976F1D33445C7233B7671E /* JGNetworkReachability.xcconfig */,
+				6B5F2C56C85A2DC33FCF4D4443F6187F /* JGNetworkReachability-dummy.m */,
+				C3C330431FF95B2742B199AD43B0D2FB /* JGNetworkReachability-prefix.pch */,
+				E0ED9D4142C73BD8BD1DC9003246EDBC /* JGNetworkReachability-umbrella.h */,
 			);
 			name = "Support Files";
 			path = "Pods/Target Support Files/JGNetworkReachability";
 			sourceTree = "<group>";
 		};
-		67A6AD8BA4E289A7BA740FE7B8A7362E /* Pods-JGNetworkReachabilityDemo */ = {
+		2471B1974103C281B8464A94DA6E189D /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				A71EF2632105A5A5A003803FFBD03CFA /* Info.plist */,
-				C188B04C35A7B742D73F2E00E6F97439 /* Pods-JGNetworkReachabilityDemo.modulemap */,
-				3A66BA38A78D1DF277A834327A1C45C4 /* Pods-JGNetworkReachabilityDemo-acknowledgements.markdown */,
-				B639709E7C95BBD1EAB8DC735B07FFD8 /* Pods-JGNetworkReachabilityDemo-acknowledgements.plist */,
-				12C85B713E68D45EA035116AEB436626 /* Pods-JGNetworkReachabilityDemo-dummy.m */,
-				92B99EC09EE37BCB0BD01D2284DD0FA4 /* Pods-JGNetworkReachabilityDemo-frameworks.sh */,
-				0992063779FF3233A70341FFA4DBBDD6 /* Pods-JGNetworkReachabilityDemo-resources.sh */,
-				2F26CAF971D07040261297D56381D918 /* Pods-JGNetworkReachabilityDemo-umbrella.h */,
-				8C33021ECF77B6B6D6F97562199BC8BF /* Pods-JGNetworkReachabilityDemo.debug.xcconfig */,
-				691A3C4A6E61AA3401CC1039E389A94A /* Pods-JGNetworkReachabilityDemo.release.xcconfig */,
+				00678434CFBF6D12719A182D8CD90265 /* Info.plist */,
+				7C8D5A0181B1627F70E92A653051D7ED /* JGSourceBase.modulemap */,
+				B7309CFBE101BD3C315868478F1A01D4 /* JGSourceBase.xcconfig */,
+				D537807A89D049709B740234170E2C4B /* JGSourceBase-dummy.m */,
+				8D313DB3DAE1D2E731EDF2676D8C357A /* JGSourceBase-prefix.pch */,
+				5160D7E00DC90A6FF2A4D1A5C59E5418 /* JGSourceBase-umbrella.h */,
 			);
-			name = "Pods-JGNetworkReachabilityDemo";
-			path = "Target Support Files/Pods-JGNetworkReachabilityDemo";
+			name = "Support Files";
+			path = "../Target Support Files/JGSourceBase";
+			sourceTree = "<group>";
+		};
+		376CF68E7C4F226088791C968477F2DE /* JGSourceBase */ = {
+			isa = PBXGroup;
+			children = (
+				6BFD753C624D957C91AEDEE365EB48A7 /* JGSCCommon.h */,
+				FCAC4572431B5787750F70C1071F3E1F /* JGSCLog.h */,
+				7F6D1FFCFEC67B7A76D4FC7BA0A3C91E /* JGSCLog.m */,
+				9C59254FA144E5ED433055DBEEDEA0F9 /* JGSCRuntime.h */,
+				6084BC21B2DEED4A5AC0AD550EC8E7F0 /* JGSCRuntime.m */,
+				CC165A75A174EB4BA28CFC6949FC6D31 /* JGSCWeakStrongProperty.h */,
+				64019A7091CA09F2276BB527B7093CF0 /* JGSourceBase.h */,
+				2471B1974103C281B8464A94DA6E189D /* Support Files */,
+			);
+			name = JGSourceBase;
+			path = JGSourceBase;
 			sourceTree = "<group>";
 		};
 		691F274530B1D83FB8592421AEAF59EE /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				1A32CF0BF3AB34FA1E327059490DECC9 /* JGSourceBase.framework */,
-				2FFC678636C19EC754C392169FCC53CA /* iOS */,
+				8B16E10D083E4A7F02236821389E17DA /* iOS */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		71EBB7132608420755ED3BB660B4D6F2 /* JGNetworkReachability */ = {
+			isa = PBXGroup;
+			children = (
+				2CE2BF0DE6025C4F568C41FFCF400248 /* JGNetworkReachability.h */,
+				08A2CFB48AE33AABD3321EEF39715C00 /* JGNRReachability.h */,
+				CE775FDFAB7BB45E59256738334B4C6F /* JGNRReachability.m */,
+				B647F9E68ABD61BDDA5D7963D2274E4B /* Pod */,
+				025A99A7F065D31EBD95C7E1456AD82A /* Support Files */,
+			);
+			name = JGNetworkReachability;
+			path = ..;
 			sourceTree = "<group>";
 		};
 		7DB346D0F39D3F0E887471402A8071AB = {
@@ -187,7 +198,7 @@
 				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
 				EB426027D0FD608FE911642F6B979333 /* Development Pods */,
 				691F274530B1D83FB8592421AEAF59EE /* Frameworks */,
-				9D214D5E515031A9D7AB228DCB50B721 /* Pods */,
+				F3CA0973BA75547359A7EDDA32ABB5A5 /* Pods */,
 				F8B791C2048B1E9C6CB93066593E9206 /* Products */,
 				867F3ED0BFD956173E0CD2C448D24CF3 /* Targets Support Files */,
 			);
@@ -196,66 +207,61 @@
 		867F3ED0BFD956173E0CD2C448D24CF3 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				67A6AD8BA4E289A7BA740FE7B8A7362E /* Pods-JGNetworkReachabilityDemo */,
+				C0D1524769D0418FBF557FF86C1B306B /* Pods-JGNetworkReachabilityDemo */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		8E4BBFCD447ADD24E3F4FE1214145CA2 /* JGSourceBase */ = {
+		8B16E10D083E4A7F02236821389E17DA /* iOS */ = {
 			isa = PBXGroup;
 			children = (
-				EC28384EF8D710D954F27FC49D4CC0C4 /* JGSourceBase.h */,
-				A1BDB92FF58A644CCC63DBF30F9F7355 /* JGSourceCommon.h */,
-				1AAB75276865D14823311893AD8064DA /* JGSourceCommon.m */,
-				2EE9528C6E4D27FF9AAD70D9E74272A2 /* JGSourceResource.h */,
-				8A612ECD12C0027FDAD84850FFCFB62F /* JGSourceResource.m */,
-				D4924B09C11DFC88EB09744565BE4BBC /* Support Files */,
+				9968CF35F7281F18B46B7AD408B7EB7F /* Foundation.framework */,
 			);
-			name = JGSourceBase;
-			path = JGSourceBase;
+			name = iOS;
 			sourceTree = "<group>";
 		};
-		9D214D5E515031A9D7AB228DCB50B721 /* Pods */ = {
+		B647F9E68ABD61BDDA5D7963D2274E4B /* Pod */ = {
 			isa = PBXGroup;
 			children = (
-				8E4BBFCD447ADD24E3F4FE1214145CA2 /* JGSourceBase */,
+				0913CD692D61D299BEE438B6C67C1286 /* JGNetworkReachability.podspec */,
+				C52C23ABE6BAAFDF7E9FEE96057CFFFB /* LICENSE */,
+				E8ACD16667CEF41018BB78F1CF03C16B /* README.md */,
 			);
-			name = Pods;
+			name = Pod;
 			sourceTree = "<group>";
 		};
-		D4924B09C11DFC88EB09744565BE4BBC /* Support Files */ = {
+		C0D1524769D0418FBF557FF86C1B306B /* Pods-JGNetworkReachabilityDemo */ = {
 			isa = PBXGroup;
 			children = (
-				436A4BCC7515AB1152CD946364822973 /* Info.plist */,
-				5995AB03E37058F6685CFFD0764362D7 /* JGSourceBase.modulemap */,
-				1B230D50E02497796FCF3E40A4712466 /* JGSourceBase.xcconfig */,
-				1E275884424DE775E43A91D15083499B /* JGSourceBase-dummy.m */,
-				08F0F41B7233FA62C029FE75E75C87AD /* JGSourceBase-prefix.pch */,
-				BBF1A0F83012D32651EF1D8DEAAEBF72 /* JGSourceBase-umbrella.h */,
+				E8C277B24B93965DB6CC1EA1F876AB09 /* Info.plist */,
+				C6E9A2980A3CA7480047FC7056D85A87 /* Pods-JGNetworkReachabilityDemo.modulemap */,
+				B940337D19F8F76D98A411B7CF9C2F27 /* Pods-JGNetworkReachabilityDemo-acknowledgements.markdown */,
+				9AC444AAE875D3BB7ED43FC248A294ED /* Pods-JGNetworkReachabilityDemo-acknowledgements.plist */,
+				250626C6D7A4AF098CDEEE944D6FF6E2 /* Pods-JGNetworkReachabilityDemo-dummy.m */,
+				A8B54B2AABDC72B7B089263EBB323BCC /* Pods-JGNetworkReachabilityDemo-frameworks.sh */,
+				D4DB7BCCE3437CF053ADA6C3A7EC83CD /* Pods-JGNetworkReachabilityDemo-resources.sh */,
+				9AF0B3A4EEF821EED2F39509BF399244 /* Pods-JGNetworkReachabilityDemo-umbrella.h */,
+				C2F85CA298C871925623CCF71C82FD44 /* Pods-JGNetworkReachabilityDemo.debug.xcconfig */,
+				9CAE559818393CF1A31316EC7573588C /* Pods-JGNetworkReachabilityDemo.release.xcconfig */,
 			);
-			name = "Support Files";
-			path = "../Target Support Files/JGSourceBase";
-			sourceTree = "<group>";
-		};
-		E2B5B361FEFB8EDCB56C0A3630D93B4C /* JGNetworkReachability */ = {
-			isa = PBXGroup;
-			children = (
-				EF172F5CDAA0D25A21DD728474382BCB /* JGNetworkReachability.h */,
-				34003CDBE09294F2D81EE1A2E7FF3766 /* JGNetworkReachabilityImpl.h */,
-				35EA8287FC844AF116E30704CE2164A2 /* JGNetworkReachabilityImpl.m */,
-				0A4BB2E77E2F815849B717C2E2A79853 /* Pod */,
-				62EB6EB35AC0F8C5F23EE78542E4FE5E /* Support Files */,
-			);
-			name = JGNetworkReachability;
-			path = ..;
+			name = "Pods-JGNetworkReachabilityDemo";
+			path = "Target Support Files/Pods-JGNetworkReachabilityDemo";
 			sourceTree = "<group>";
 		};
 		EB426027D0FD608FE911642F6B979333 /* Development Pods */ = {
 			isa = PBXGroup;
 			children = (
-				E2B5B361FEFB8EDCB56C0A3630D93B4C /* JGNetworkReachability */,
+				71EBB7132608420755ED3BB660B4D6F2 /* JGNetworkReachability */,
 			);
 			name = "Development Pods";
+			sourceTree = "<group>";
+		};
+		F3CA0973BA75547359A7EDDA32ABB5A5 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				376CF68E7C4F226088791C968477F2DE /* JGSourceBase */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 		F8B791C2048B1E9C6CB93066593E9206 /* Products */ = {
@@ -279,24 +285,26 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		57ACB58F457AB48236F17815EE044549 /* Headers */ = {
+		3E478C1AC24317C5C6177D5CE884379A /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EFA6135E9398580A9AB685876E5F5618 /* JGSourceBase-umbrella.h in Headers */,
-				EB797B01602C05C298BEE5991D489E15 /* JGSourceBase.h in Headers */,
-				CA2D7317628CE8465EA28A765CB2CCA1 /* JGSourceCommon.h in Headers */,
-				6384AB6D1F8A8E49E054F57A0E8DAFFB /* JGSourceResource.h in Headers */,
+				127BD85EE3101770E6F62EBA5B6D66AA /* JGSCCommon.h in Headers */,
+				AAE227097D09E436A87EC8D7C3EC33B2 /* JGSCLog.h in Headers */,
+				ACEF256DC33421ACE6092A538FC48847 /* JGSCRuntime.h in Headers */,
+				3C92B9CA86DA149E52513C1AFB46AF71 /* JGSCWeakStrongProperty.h in Headers */,
+				3A8A2495DE2AC80775F4F8CF2823704E /* JGSourceBase-umbrella.h in Headers */,
+				EBAB564E0A8079A484F3ED036B1537CC /* JGSourceBase.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		BAED55A74A40E504F38D2FB461F554B2 /* Headers */ = {
+		C2659DCE116B95FC0309DCDD1AA4A998 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AECC64B111DB2AC6FF6B2CD7B1BC091E /* JGNetworkReachability-umbrella.h in Headers */,
-				457F6FD420D359FF5B768EC7ED0935EC /* JGNetworkReachability.h in Headers */,
-				60C9053DF8DEF2E8C688B4A629703CE0 /* JGNetworkReachabilityImpl.h in Headers */,
+				64B6253D1B10916D66FCC1338584C27F /* JGNetworkReachability-umbrella.h in Headers */,
+				EDEF923249E60ABD960F5CE4FF58B944 /* JGNetworkReachability.h in Headers */,
+				27E0B775FC4B4DDEE80F284128896AA5 /* JGNRReachability.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -307,9 +315,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 87A4B728C7E20B77B51AE9ADF862E76B /* Build configuration list for PBXNativeTarget "JGSourceBase" */;
 			buildPhases = (
-				09F008920F1154BA12C42137D6755973 /* Sources */,
+				CCAFBF1D1FFD72AA529D0B57E54EF3AA /* Sources */,
 				9BBA675C182EB51916CDD56D06C368C5 /* Frameworks */,
-				57ACB58F457AB48236F17815EE044549 /* Headers */,
+				3E478C1AC24317C5C6177D5CE884379A /* Headers */,
 			);
 			buildRules = (
 			);
@@ -343,9 +351,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8B60B958D427EAF29435DD2D87441053 /* Build configuration list for PBXNativeTarget "JGNetworkReachability" */;
 			buildPhases = (
-				22415907B731B04CAB82152F2217F5E7 /* Sources */,
+				9FC485D53CD919449ADE6EE92B4150DC /* Sources */,
 				53754FC9F6D70BE08B8ADE94DF5B47AD /* Frameworks */,
-				BAED55A74A40E504F38D2FB461F554B2 /* Headers */,
+				C2659DCE116B95FC0309DCDD1AA4A998 /* Headers */,
 			);
 			buildRules = (
 			);
@@ -363,8 +371,8 @@
 		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 0830;
-				LastUpgradeCheck = 0700;
+				LastSwiftUpdateCheck = 0930;
+				LastUpgradeCheck = 0930;
 			};
 			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 3.2";
@@ -386,16 +394,6 @@
 /* End PBXProject section */
 
 /* Begin PBXSourcesBuildPhase section */
-		09F008920F1154BA12C42137D6755973 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				0C0123CA4BD7F81E5E59362B8EE59F31 /* JGSourceBase-dummy.m in Sources */,
-				48A0F95396D4E5E5FF5DCF873A45895D /* JGSourceCommon.m in Sources */,
-				514C29F739D746AC93464E2C27A0BDE9 /* JGSourceResource.m in Sources */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
 		1F5992FC9E6D797AF0903D5BBDE188B6 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -404,12 +402,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		22415907B731B04CAB82152F2217F5E7 /* Sources */ = {
+		9FC485D53CD919449ADE6EE92B4150DC /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				AB36CAD52D388685B97E10E4294C6FC1 /* JGNetworkReachability-dummy.m in Sources */,
-				8499CE28744F2B4E2F6D1C8B9C186F8D /* JGNetworkReachabilityImpl.m in Sources */,
+				2B4D75C1AC8DF93BE0361E3C05FD911C /* JGNetworkReachability-dummy.m in Sources */,
+				55D6C7772BB33C077D2C17828CCFEA06 /* JGNRReachability.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		CCAFBF1D1FFD72AA529D0B57E54EF3AA /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6DD6BF19B9CFDA1F702C5AA2389A11C7 /* JGSCLog.m in Sources */,
+				0FA33C2F9FC979B3130E1937DCAEDDB4 /* JGSCRuntime.m in Sources */,
+				2EF41673826594F7959A8F2C89221B07 /* JGSourceBase-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -437,128 +445,7 @@
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
-		1F6C3C99665B40DB48526D4EF98FF4F0 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03EF56BA0BF09DFD2E0CF0DC597D3E18 /* JGNetworkReachability.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JGNetworkReachability/JGNetworkReachability-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JGNetworkReachability/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JGNetworkReachability/JGNetworkReachability.modulemap";
-				PRODUCT_NAME = JGNetworkReachability;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		6627CC73037CA0918ED4A8702BFDD0A8 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B230D50E02497796FCF3E40A4712466 /* JGSourceBase.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JGSourceBase/JGSourceBase-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JGSourceBase/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JGSourceBase/JGSourceBase.modulemap";
-				PRODUCT_NAME = JGSourceBase;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		8A87DA1342FD586085C7AA0BDAB82B74 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 03EF56BA0BF09DFD2E0CF0DC597D3E18 /* JGNetworkReachability.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JGNetworkReachability/JGNetworkReachability-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JGNetworkReachability/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JGNetworkReachability/JGNetworkReachability.modulemap";
-				PRODUCT_NAME = JGNetworkReachability;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		9D2F74D17143123D9301E29944A6A5BD /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 691A3C4A6E61AA3401CC1039E389A94A /* Pods-JGNetworkReachabilityDemo.release.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-JGNetworkReachabilityDemo/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-JGNetworkReachabilityDemo/Pods-JGNetworkReachabilityDemo.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_JGNetworkReachabilityDemo;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		B254DAA6CF0CE39F4A3D11B90A7E059A /* Release */ = {
+		1EE19F5DD95931924296F637BF18BD8F /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
@@ -568,10 +455,12 @@
 				CLANG_CXX_LIBRARY = "libc++";
 				CLANG_ENABLE_MODULES = YES;
 				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
 				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -579,6 +468,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -587,91 +477,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGNING_REQUIRED = NO;
-				COPY_PHASE_STRIP = NO;
-				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
-				ENABLE_NS_ASSERTIONS = NO;
-				ENABLE_STRICT_OBJC_MSGSEND = YES;
-				GCC_C_LANGUAGE_STANDARD = gnu11;
-				GCC_NO_COMMON_BLOCKS = YES;
-				GCC_PREPROCESSOR_DEFINITIONS = (
-					"POD_CONFIGURATION_RELEASE=1",
-					"$(inherited)",
-				);
-				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
-				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
-				GCC_WARN_UNDECLARED_SELECTOR = YES;
-				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
-				GCC_WARN_UNUSED_FUNCTION = YES;
-				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				MTL_ENABLE_DEBUG_INFO = NO;
-				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
-				STRIP_INSTALLED_PRODUCT = NO;
-				SYMROOT = "${SRCROOT}/../build";
-			};
-			name = Release;
-		};
-		B421A2631596F3DEA5E3C9468EE790B2 /* Release */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 1B230D50E02497796FCF3E40A4712466 /* JGSourceBase.xcconfig */;
-			buildSettings = {
-				CODE_SIGN_IDENTITY = "";
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				GCC_PREFIX_HEADER = "Target Support Files/JGSourceBase/JGSourceBase-prefix.pch";
-				INFOPLIST_FILE = "Target Support Files/JGSourceBase/Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
-				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
-				MODULEMAP_FILE = "Target Support Files/JGSourceBase/JGSourceBase.modulemap";
-				PRODUCT_NAME = JGSourceBase;
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
-				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VALIDATE_PRODUCT = YES;
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Release;
-		};
-		E4B68EE12B21C47CB798D9B1ECA6D7A7 /* Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = {
-				ALWAYS_SEARCH_USER_PATHS = NO;
-				CLANG_ANALYZER_NONNULL = YES;
-				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
-				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
-				CLANG_CXX_LIBRARY = "libc++";
-				CLANG_ENABLE_MODULES = YES;
-				CLANG_ENABLE_OBJC_ARC = YES;
-				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
-				CLANG_WARN_BOOL_CONVERSION = YES;
-				CLANG_WARN_COMMA = YES;
-				CLANG_WARN_CONSTANT_CONVERSION = YES;
-				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
-				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
-				CLANG_WARN_EMPTY_BODY = YES;
-				CLANG_WARN_ENUM_CONVERSION = YES;
-				CLANG_WARN_INFINITE_RECURSION = YES;
-				CLANG_WARN_INT_CONVERSION = YES;
-				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
-				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
-				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
-				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
-				CLANG_WARN_STRICT_PROTOTYPES = YES;
-				CLANG_WARN_SUSPICIOUS_MOVE = YES;
-				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
-				CLANG_WARN_UNREACHABLE_CODE = YES;
-				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
 				CODE_SIGNING_REQUIRED = NO;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
@@ -696,17 +502,17 @@
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
 				STRIP_INSTALLED_PRODUCT = NO;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SYMROOT = "${SRCROOT}/../build";
 			};
 			name = Debug;
 		};
-		FD2EADC311C84C3BF46041C17E122380 /* Debug */ = {
+		4B7EA1EB910C44B6146765E592B86795 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 8C33021ECF77B6B6D6F97562199BC8BF /* Pods-JGNetworkReachabilityDemo.debug.xcconfig */;
+			baseConfigurationReference = C2F85CA298C871925623CCF71C82FD44 /* Pods-JGNetworkReachabilityDemo.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -726,7 +532,7 @@
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
 				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = Pods_JGNetworkReachabilityDemo;
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -735,14 +541,228 @@
 			};
 			name = Debug;
 		};
+		520FC4B2B1E5C0267042953A739C8785 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 9CAE559818393CF1A31316EC7573588C /* Pods-JGNetworkReachabilityDemo.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-JGNetworkReachabilityDemo/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-JGNetworkReachabilityDemo/Pods-JGNetworkReachabilityDemo.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		66BAFC9B1D451CECB5897BBA03AE4246 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7759E0B670976F1D33445C7233B7671E /* JGNetworkReachability.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JGNetworkReachability/JGNetworkReachability-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JGNetworkReachability/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JGNetworkReachability/JGNetworkReachability.modulemap";
+				PRODUCT_MODULE_NAME = JGNetworkReachability;
+				PRODUCT_NAME = JGNetworkReachability;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		8BBFB32741CBA8760D88EC1881F6A61D /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7309CFBE101BD3C315868478F1A01D4 /* JGSourceBase.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JGSourceBase/JGSourceBase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JGSourceBase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JGSourceBase/JGSourceBase.modulemap";
+				PRODUCT_MODULE_NAME = JGSourceBase;
+				PRODUCT_NAME = JGSourceBase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		AEA31AA689C529C027DF4274EFB8ED91 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7759E0B670976F1D33445C7233B7671E /* JGNetworkReachability.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JGNetworkReachability/JGNetworkReachability-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JGNetworkReachability/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JGNetworkReachability/JGNetworkReachability.modulemap";
+				PRODUCT_MODULE_NAME = JGNetworkReachability;
+				PRODUCT_NAME = JGNetworkReachability;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		CDAB0877B08296668F925FC613C3E399 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = B7309CFBE101BD3C315868478F1A01D4 /* JGSourceBase.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				GCC_PREFIX_HEADER = "Target Support Files/JGSourceBase/JGSourceBase-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/JGSourceBase/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				MODULEMAP_FILE = "Target Support Files/JGSourceBase/JGSourceBase.modulemap";
+				PRODUCT_MODULE_NAME = JGSourceBase;
+				PRODUCT_NAME = JGSourceBase;
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		F4568DEE257655D290C2B9CEAB37C934 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_ALLOWED = NO;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
 		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				E4B68EE12B21C47CB798D9B1ECA6D7A7 /* Debug */,
-				B254DAA6CF0CE39F4A3D11B90A7E059A /* Release */,
+				1EE19F5DD95931924296F637BF18BD8F /* Debug */,
+				F4568DEE257655D290C2B9CEAB37C934 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -750,8 +770,8 @@
 		87A4B728C7E20B77B51AE9ADF862E76B /* Build configuration list for PBXNativeTarget "JGSourceBase" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				6627CC73037CA0918ED4A8702BFDD0A8 /* Debug */,
-				B421A2631596F3DEA5E3C9468EE790B2 /* Release */,
+				8BBFB32741CBA8760D88EC1881F6A61D /* Debug */,
+				CDAB0877B08296668F925FC613C3E399 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -759,8 +779,8 @@
 		8B60B958D427EAF29435DD2D87441053 /* Build configuration list for PBXNativeTarget "JGNetworkReachability" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				1F6C3C99665B40DB48526D4EF98FF4F0 /* Debug */,
-				8A87DA1342FD586085C7AA0BDAB82B74 /* Release */,
+				66BAFC9B1D451CECB5897BBA03AE4246 /* Debug */,
+				AEA31AA689C529C027DF4274EFB8ED91 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
@@ -768,8 +788,8 @@
 		C456D42E944ED66878D856069AFA1DEC /* Build configuration list for PBXNativeTarget "Pods-JGNetworkReachabilityDemo" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
-				FD2EADC311C84C3BF46041C17E122380 /* Debug */,
-				9D2F74D17143123D9301E29944A6A5BD /* Release */,
+				4B7EA1EB910C44B6146765E592B86795 /* Debug */,
+				520FC4B2B1E5C0267042953A739C8785 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

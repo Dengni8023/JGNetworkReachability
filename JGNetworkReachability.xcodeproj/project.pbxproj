@@ -8,22 +8,22 @@
 
 /* Begin PBXBuildFile section */
 		92347926ADE5FDBAFC9C5A9F /* Pods_JGNetworkReachability.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = FAB0B8AE91B4E86B5F1B1215 /* Pods_JGNetworkReachability.framework */; };
+		D44110AE20CF587D00031402 /* JGNRReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = D44110AC20CF587D00031402 /* JGNRReachability.h */; };
+		D44110AF20CF587D00031402 /* JGNRReachability.m in Sources */ = {isa = PBXBuildFile; fileRef = D44110AD20CF587D00031402 /* JGNRReachability.m */; };
 		D4C9BBF51FC8652A003D0976 /* JGNetworkReachability.h in Headers */ = {isa = PBXBuildFile; fileRef = D4C9BBF31FC8652A003D0976 /* JGNetworkReachability.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D4C9BBFF1FC86596003D0976 /* JGNetworkReachabilityImpl.h in Headers */ = {isa = PBXBuildFile; fileRef = D4C9BBFD1FC86596003D0976 /* JGNetworkReachabilityImpl.h */; settings = {ATTRIBUTES = (Public, ); }; };
-		D4C9BC001FC86596003D0976 /* JGNetworkReachabilityImpl.m in Sources */ = {isa = PBXBuildFile; fileRef = D4C9BBFE1FC86596003D0976 /* JGNetworkReachabilityImpl.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		02480294585F8B0A5B8BDAFF /* Pods-JGNetworkReachabilityDemo.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JGNetworkReachabilityDemo.debug.xcconfig"; path = "Pods/Target Support Files/Pods-JGNetworkReachabilityDemo/Pods-JGNetworkReachabilityDemo.debug.xcconfig"; sourceTree = "<group>"; };
 		63598FD446ECEA2029720F05 /* Pods_JGNetworkReachabilityDemo.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JGNetworkReachabilityDemo.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8446D009DA8B5754BFC7B875 /* Pods-JGNetworkReachabilityDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JGNetworkReachabilityDemo.release.xcconfig"; path = "Pods/Target Support Files/Pods-JGNetworkReachabilityDemo/Pods-JGNetworkReachabilityDemo.release.xcconfig"; sourceTree = "<group>"; };
+		D44110AC20CF587D00031402 /* JGNRReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JGNRReachability.h; sourceTree = "<group>"; };
+		D44110AD20CF587D00031402 /* JGNRReachability.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JGNRReachability.m; sourceTree = "<group>"; };
 		D4C9BBF01FC8652A003D0976 /* JGNetworkReachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JGNetworkReachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D4C9BBF31FC8652A003D0976 /* JGNetworkReachability.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JGNetworkReachability.h; sourceTree = "<group>"; };
 		D4C9BBF41FC8652A003D0976 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4C9BBFB1FC8656B003D0976 /* JGNetworkReachability.podspec */ = {isa = PBXFileReference; lastKnownFileType = text; path = JGNetworkReachability.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		D4C9BBFC1FC8656B003D0976 /* README.md */ = {isa = PBXFileReference; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		D4C9BBFD1FC86596003D0976 /* JGNetworkReachabilityImpl.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JGNetworkReachabilityImpl.h; sourceTree = "<group>"; };
-		D4C9BBFE1FC86596003D0976 /* JGNetworkReachabilityImpl.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = JGNetworkReachabilityImpl.m; sourceTree = "<group>"; };
 		FAB0B8AE91B4E86B5F1B1215 /* Pods_JGNetworkReachability.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_JGNetworkReachability.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -82,8 +82,8 @@
 			children = (
 				D4C9BBF41FC8652A003D0976 /* Info.plist */,
 				D4C9BBF31FC8652A003D0976 /* JGNetworkReachability.h */,
-				D4C9BBFD1FC86596003D0976 /* JGNetworkReachabilityImpl.h */,
-				D4C9BBFE1FC86596003D0976 /* JGNetworkReachabilityImpl.m */,
+				D44110AC20CF587D00031402 /* JGNRReachability.h */,
+				D44110AD20CF587D00031402 /* JGNRReachability.m */,
 			);
 			path = JGNetworkReachability;
 			sourceTree = "<group>";
@@ -95,8 +95,8 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D44110AE20CF587D00031402 /* JGNRReachability.h in Headers */,
 				D4C9BBF51FC8652A003D0976 /* JGNetworkReachability.h in Headers */,
-				D4C9BBFF1FC86596003D0976 /* JGNetworkReachabilityImpl.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -129,7 +129,7 @@
 		D4C9BBE71FC8652A003D0976 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0910;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = MeiJigao;
 				TargetAttributes = {
 					D4C9BBEF1FC8652A003D0976 = {
@@ -207,7 +207,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4C9BC001FC86596003D0976 /* JGNetworkReachabilityImpl.m in Sources */,
+				D44110AF20CF587D00031402 /* JGNRReachability.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -228,6 +228,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -235,6 +236,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -286,6 +288,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -293,6 +296,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;

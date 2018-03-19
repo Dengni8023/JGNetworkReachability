@@ -54,7 +54,7 @@
 
 - (void)dealloc {
     
-    JGLog(@"<%@: %p>", NSStringFromClass([self class]), self);
+    JGSCLog(@"<%@: %p>", NSStringFromClass([self class]), self);
     [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
@@ -62,30 +62,30 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    JGEnableLogWithMode(JGLogModeFunc);
+    JGSCEnableLogWithMode(JGSCLogModeFunc);
     self.title = NSStringFromClass([self class]);
     
-    self.clearsSelectionOnViewWillAppear = NO;
+    self.clearsSelectionOnViewWillAppear = YES;
     //self.navigationItem.rightBarButtonItem = self.editButtonItem;
     
     self.tableView.rowHeight = 44;
     self.tableView.sectionHeaderHeight = 48;
     self.tableView.tableFooterView = [[UIView alloc] init];
     
-    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:JGReuseIdentifier(UITableViewCell)];
+    [self.tableView registerClass:[UITableViewCell class] forCellReuseIdentifier:JGSCReuseIdentifier(UITableViewCell)];
     
-    [[JGNetworkReachability sharedInstance] startMonitor];
+    [[JGNRReachability sharedInstance] startMonitor];
     switch (_observerType) {
         case StatusObserverTypeBlock: {
             
             // TODO: 注意block内部循环引用内存问题
-            JGWeak(self);
+            JGSCWeak(self);
             self.title = @"Observer Block";
-            [[JGNetworkReachability sharedInstance] addObserver:self action:^(JGNetworkReachabilityStatus status) {
+            [[JGNRReachability sharedInstance] addObserver:self statusChangeBlock:^(JGNRReachabilityStatus status) {
                 
-                JGLog(@"Status : %@", [[JGNetworkReachability sharedInstance] reachabilityStatusString]);
+                JGSCLog(@"Status : %@", [[JGNRReachability sharedInstance] reachabilityStatusString]);
                 
-                JGStrong(self);
+                JGSCStrong(self);
                 [self.tableView reloadData];
             }];
         }
@@ -94,35 +94,35 @@
         case StatusObserverTypeSelector: {
             
             self.title = @"Observer Selector";
-            [[JGNetworkReachability sharedInstance] addObserver:self selector:@selector(networkStatusChanged)];
+            [[JGNRReachability sharedInstance] addObserver:self selector:@selector(networkStatusChanged)];
         }
             break;
             
         case StatusObserverTypeSelectorValue1: {
             
             self.title = @"Observer Selector Value 1";
-            [[JGNetworkReachability sharedInstance] addObserver:self selector:@selector(networkStatusChanged:)];
+            [[JGNRReachability sharedInstance] addObserver:self selector:@selector(networkStatusChanged:)];
         }
             break;
             
         case StatusObserverTypeSelectorValue2: {
             
             self.title = @"Observer Selector Value 2";
-            [[JGNetworkReachability sharedInstance] addObserver:self selector:@selector(networkStatusChanged:value2:)];
+            [[JGNRReachability sharedInstance] addObserver:self selector:@selector(networkStatusChanged:value2:)];
         }
             break;
             
         case StatusObserverTypeSelectorValue3: {
             
             self.title = @"Observer Selector Value 3";
-            [[JGNetworkReachability sharedInstance] addObserver:self selector:@selector(networkStatusChanged:value2:value3:)];
+            [[JGNRReachability sharedInstance] addObserver:self selector:@selector(networkStatusChanged:value2:value3:)];
         }
             break;
             
         case StatusObserverTypeNotification: {
             
             self.title = @"Observer Notification";
-            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkStatusChangedNotification:) name:JGNetworkReachabilityStatusChangedNotification object:nil];
+            [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkStatusChangedNotification:) name:JGNRReachabilityStatusChangedNotification object:nil];
         }
             break;
     }
@@ -144,10 +144,10 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JGReuseIdentifier(UITableViewCell) forIndexPath:indexPath];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:JGSCReuseIdentifier(UITableViewCell) forIndexPath:indexPath];
+    //cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     
-    cell.textLabel.text = [NSString stringWithFormat:@"Status : %@", [[JGNetworkReachability sharedInstance] reachabilityStatusString]];
+    cell.textLabel.text = [NSString stringWithFormat:@"Status : %@", [[JGNRReachability sharedInstance] reachabilityStatusString]];
     
     return cell;
 }
@@ -160,36 +160,36 @@
 #pragma mark - Action
 - (void)networkStatusChanged {
     
-    JGLog(@"Status : %@", [[JGNetworkReachability sharedInstance] reachabilityStatusString]);
+    JGSCLog(@"Status : %@", [[JGNRReachability sharedInstance] reachabilityStatusString]);
     [self.tableView reloadData];
 }
 
 - (void)networkStatusChanged:(id)value1 {
     
-    JGLog(@"%@", value1);
-    JGLog(@"Status : %@", [[JGNetworkReachability sharedInstance] reachabilityStatusString]);
+    JGSCLog(@"%@", value1);
+    JGSCLog(@"Status : %@", [[JGNRReachability sharedInstance] reachabilityStatusString]);
     [self.tableView reloadData];
 }
 
 - (void)networkStatusChanged:(id)value1 value2:(id)value2 {
     
-    JGLog(@"%@, %@", value1, value2);
-    JGLog(@"Status : %@", [[JGNetworkReachability sharedInstance] reachabilityStatusString]);
+    JGSCLog(@"%@, %@", value1, value2);
+    JGSCLog(@"Status : %@", [[JGNRReachability sharedInstance] reachabilityStatusString]);
     [self.tableView reloadData];
 }
 
 - (void)networkStatusChanged:(id)value1 value2:(id)value2 value3:(id)value3 {
     
-    JGLog(@"%@, %@, %@", value1, value2, value3);
-    JGLog(@"Status : %@", [[JGNetworkReachability sharedInstance] reachabilityStatusString]);
+    JGSCLog(@"%@, %@, %@", value1, value2, value3);
+    JGSCLog(@"Status : %@", [[JGNRReachability sharedInstance] reachabilityStatusString]);
     [self.tableView reloadData];
 }
 
 #pragma mark - Notification
 - (void)networkStatusChangedNotification:(NSNotification *)notification {
     
-    JGLog(@"%@, %@", notification.object, notification.userInfo);
-    JGLog(@"Status : %@", [[JGNetworkReachability sharedInstance] reachabilityStatusString]);
+    JGSCLog(@"%@, %@", notification.object, notification.userInfo);
+    JGSCLog(@"Status : %@", [[JGNRReachability sharedInstance] reachabilityStatusString]);
     [self.tableView reloadData];
 }
 

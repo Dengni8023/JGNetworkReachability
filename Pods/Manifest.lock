@@ -1,19 +1,23 @@
 PODS:
-  - JGNetworkReachability (0.0.5):
-    - JGSourceBase (~> 0.0.1)
-  - JGSourceBase (0.0.3)
+  - JGNetworkReachability (0.0.7):
+    - JGSourceBase (= 0.0.5)
+  - JGSourceBase (0.0.5)
 
 DEPENDENCIES:
   - JGNetworkReachability (from `.`)
 
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - JGSourceBase
+
 EXTERNAL SOURCES:
   JGNetworkReachability:
-    :path: .
+    :path: "."
 
 SPEC CHECKSUMS:
-  JGNetworkReachability: fa058adc234862ebc986ba7cece511f59a43bf90
-  JGSourceBase: 2dd7075510324c093498442d5c29f7a332df6882
+  JGNetworkReachability: 68e41121ed2707d970aff21154005f2eec96cabf
+  JGSourceBase: 9a7b3c3e40380d2f9e79bd995db6f3654083b2e9
 
-PODFILE CHECKSUM: abb348cda047912ada5a2e73c3b7518f32607ebd
+PODFILE CHECKSUM: f1eeaded96a08bf35d7f267a889894b5fc49bcfa
 
-COCOAPODS: 1.4.0
+COCOAPODS: 1.5.3

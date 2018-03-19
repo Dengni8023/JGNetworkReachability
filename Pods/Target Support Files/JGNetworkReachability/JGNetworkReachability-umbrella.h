@@ -11,7 +11,7 @@
 #endif
 
 #import "JGNetworkReachability.h"
-#import "JGNetworkReachabilityImpl.h"
+#import "JGNRReachability.h"
 
 FOUNDATION_EXPORT double JGNetworkReachabilityVersionNumber;
 FOUNDATION_EXPORT const unsigned char JGNetworkReachabilityVersionString[];

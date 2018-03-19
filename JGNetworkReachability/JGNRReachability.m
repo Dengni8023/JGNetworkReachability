@@ -1,20 +1,23 @@
 //
-//  JGNetworkReachabilityImpl.m
+//  JGNRReachability.m
 //  JGNetworkReachability
 //
-//  Created by Mei Jigao on 2017/11/24.
-//  Copyright © 2017年 MeiJigao. All rights reserved.
+//  Created by 梅继高 on 2018/6/12.
+//  Copyright © 2018年 MeiJigao. All rights reserved.
 //
 
-#import "JGNetworkReachabilityImpl.h"
+#import "JGNRReachability.h"
 #import <SystemConfiguration/SystemConfiguration.h>
 #import <CoreTelephony/CTTelephonyNetworkInfo.h>
 #import <netinet/in.h>
 #import <netinet6/in6.h>
 #import "JGSourceBase.h"
 
-NSNotificationName const JGNetworkReachabilityStatusChangedNotification = @"JGNetworkReachabilityStatusChangedNotification";
-JGNetworkReachabilityNotificationKey const JGNetworkReachabilityNotificationstatusKey = @"JGNetworkReachabilityNotificationstatusKey";
+NSNotificationName const JGNRReachabilityStatusChangedNotification = @"JGNRReachabilityStatusChangedNotification";
+NSNotificationName const JGNetworkReachabilityStatusChangedNotification = JGNRReachabilityStatusChangedNotification;
+
+JGNRReachabilityNotificationKey const JGNRReachabilityNotificationStatusKey = @"JGNRReachabilityNotificationStatusKey";
+JGNRReachabilityNotificationKey const JGNetworkReachabilityNotificationstatusKey = JGNRReachabilityNotificationStatusKey;
 
 typedef void (^JGNetworkReachabilityStatusBlock)(void);
 
@@ -45,7 +48,7 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
     }
 }
 
-@interface JGNetworkReachability ()
+@interface JGNRReachability ()
 
 @property (nonatomic, assign, readonly) SCNetworkReachabilityRef reachabilityRef;
 @property (nonatomic, assign, readonly) BOOL runningSchedule;
@@ -55,17 +58,17 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
 
 @end
 
-@implementation JGNetworkReachability
+@implementation JGNRReachability
 
 #pragma mark - ClassMethod
 + (instancetype)sharedInstance {
     
-    static JGNetworkReachability *instance = nil;
+    static JGNRReachability *instance = nil;
     
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         
-        instance = [[JGNetworkReachability alloc] init];
+        instance = [[self alloc] init];
     });
     
     return instance;
@@ -124,10 +127,10 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
         return;
     }
     
-    JGWeak(self);
+    JGSCWeak(self);
     JGNetworkReachabilityStatusBlock callback = ^(void) {
         
-        JGStrong(self);
+        JGSCStrong(self);
         [self notifyReachabilityStatusChange];
     };
     
@@ -149,15 +152,15 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
     _runningSchedule = !SCNetworkReachabilityUnscheduleFromRunLoop(self.reachabilityRef, CFRunLoopGetMain(), kCFRunLoopCommonModes);
 }
 
-- (void)addObserver:(id)observer action:(JGNetworkReachabilityStatusChangeAction)notification {
+- (void)addObserver:(id)observer statusChangeBlock:(nullable JGNRReachabilityStatusChangeBlock)block {
     
-    if (observer && notification) {
+    if (observer && block) {
         
-        [self.statusBlocks setObject:notification forKey:observer];
+        [self.statusBlocks setObject:block forKey:observer];
     }
 }
 
-- (void)removeActionWithObserver:(id)observer {
+- (void)removeStatusChangeBlockWithObserver:(id)observer {
     
     if (observer) {
         
@@ -186,10 +189,10 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
     // Block
     for (id obj in self.statusBlocks.objectEnumerator.allObjects) {
         
-        JGNetworkReachabilityStatusChangeAction action = obj;
-        if (action) {
+        JGNRReachabilityStatusChangeBlock block = obj;
+        if (block) {
             
-            action(self.reachabilityStatus);
+            block(self.reachabilityStatus);
         }
     }
     
@@ -204,11 +207,11 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
     }
     
     // Notification Center
-    [[NSNotificationCenter defaultCenter] postNotificationName:JGNetworkReachabilityStatusChangedNotification object:self userInfo:@{JGNetworkReachabilityNotificationstatusKey : @(self.reachabilityStatus)}];
+    [[NSNotificationCenter defaultCenter] postNotificationName:JGNRReachabilityStatusChangedNotification object:self userInfo:@{JGNRReachabilityNotificationStatusKey : @(self.reachabilityStatus)}];
 }
 
 #pragma mark - Getter
-- (JGNetworkReachabilityStatus)reachabilityStatus {
+- (JGNRReachabilityStatus)reachabilityStatus {
     
     // 标识(Flags)代表对一个域名(网络结点)或者地址(IP)的可连接性
     // 其包括是否需要一个网络连接以及在建立网络连接的过程中是否需要用户干预
@@ -216,7 +219,7 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
     SCNetworkReachabilityFlags flags;
     BOOL didRetrieveFlags = SCNetworkReachabilityGetFlags(self.reachabilityRef, &flags);
     
-    JGNetworkReachabilityStatus status = JGNetworkReachabilityStatusNotReachable;
+    JGNRReachabilityStatus status = JGNRReachabilityStatusNotReachable;
     if (didRetrieveFlags) {
         
         // 通过一个短暂的(网络)连接可以到达指定的域名或地址，比如PPP(Point to Point Protocol)协议
@@ -270,11 +273,11 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
             
             if ((flags & kSCNetworkReachabilityFlagsIsWWAN) != 0) {
                 
-                status = JGNetworkReachabilityStatusReachableViaWWAN;
+                status = JGNRReachabilityStatusViaWWAN;
             }
             else {
                 
-                status = JGNetworkReachabilityStatusReachableViaWiFi;
+                status = JGNRReachabilityStatusViaWiFi;
             }
         }
     }
@@ -285,7 +288,7 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
 - (BOOL)reachable {
     
     switch (self.reachabilityStatus) {
-        case JGNetworkReachabilityStatusNotReachable:
+        case JGNRReachabilityStatusNotReachable:
             return NO;
             break;
             
@@ -298,7 +301,7 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
 - (BOOL)reachableViaWiFi {
     
     switch (self.reachabilityStatus) {
-        case JGNetworkReachabilityStatusReachableViaWiFi:
+        case JGNRReachabilityStatusViaWiFi:
             return YES;
             break;
             
@@ -311,7 +314,7 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
 - (BOOL)reachableViaWWAN {
     
     switch (self.reachabilityStatus) {
-        case JGNetworkReachabilityStatusReachableViaWWAN:
+        case JGNRReachabilityStatusViaWWAN:
             return YES;
             break;
             
@@ -321,9 +324,9 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
     }
 }
 
-- (JGNetworkReachabilityWWAN)WWANStatus {
+- (JGNRWWANType)WWANType {
     
-    JGNetworkReachabilityWWAN status = JGNetworkReachabilityWWANUnknown;
+    JGNRWWANType type = JGNRWWANTypeUnknown;
     if (self.reachableViaWWAN) {
         
         // 获取手机网络类型
@@ -332,61 +335,61 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
         if ([currentStatus isEqualToString:CTRadioAccessTechnologyGPRS]) {
             
             //GPRS网络
-            status = JGNetworkReachabilityWWANGPRS;
+            type = JGNRWWANTypeGPRS;
         }
         else if ([currentStatus isEqualToString:CTRadioAccessTechnologyEdge]) {
             
             //EDGE为GPRS到第三代移动通信的过渡，EDGE俗称2.75G
-            status = JGNetworkReachabilityWWAN2G;
+            type = JGNRWWANType2G;
         }
         else if ([currentStatus isEqualToString:CTRadioAccessTechnologyWCDMA]){
             
             //3G WCDMA网络
-            status = JGNetworkReachabilityWWAN3G;
+            type = JGNRWWANType3G;
         }
         else if ([currentStatus isEqualToString:CTRadioAccessTechnologyHSDPA]){
             
             //3.5G网络，3G到4G的过度技术
-            status = JGNetworkReachabilityWWAN3G;
+            type = JGNRWWANType3G;
         }
         else if ([currentStatus isEqualToString:CTRadioAccessTechnologyHSUPA]){
             
             //3.5G网络，3G到4G的过度技术
-            status = JGNetworkReachabilityWWAN3G;
+            type = JGNRWWANType3G;
         }
         else if ([currentStatus isEqualToString:CTRadioAccessTechnologyCDMA1x]){
             
             // CDMA 1X，CDMA2000的第一阶段
-            status = JGNetworkReachabilityWWAN3G;
+            type = JGNRWWANType3G;
         }
         else if ([currentStatus isEqualToString:CTRadioAccessTechnologyCDMAEVDORev0]){
             
             //CDMA的EVDORev0(CDMA2000的演进版本)
-            status = JGNetworkReachabilityWWAN3G;
+            type = JGNRWWANType3G;
         }
         else if ([currentStatus isEqualToString:CTRadioAccessTechnologyCDMAEVDORevA]){
             
             //CDMA的EVDORevA(CDMA2000的演进版本)
-            status = JGNetworkReachabilityWWAN3G;
+            type = JGNRWWANType3G;
         }
         else if ([currentStatus isEqualToString:CTRadioAccessTechnologyCDMAEVDORevB]){
             
             //CDMA的EVDORevB(CDMA2000的演进版本)
-            status = JGNetworkReachabilityWWAN3G;
+            type = JGNRWWANType3G;
         }
         else if ([currentStatus isEqualToString:CTRadioAccessTechnologyeHRPD]){
             
             //HRPD网络，电信使用的一种3G到4G的演进技术， 3.75G
-            status = JGNetworkReachabilityWWAN3G;
+            type = JGNRWWANType3G;
         }
         else if ([currentStatus isEqualToString:CTRadioAccessTechnologyLTE]){
             
             //LTE4G网络
-            status = JGNetworkReachabilityWWAN4G;
+            type = JGNRWWANType4G;
         }
     }
     
-    return status;
+    return type;
 }
 
 - (NSString *)reachabilityStatusString {
@@ -403,24 +406,24 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
             
         case JGNetworkReachabilityStatusReachableViaWWAN: {
             
-            switch (self.WWANStatus) {
-                case JGNetworkReachabilityWWANUnknown:
+            switch (self.WWANType) {
+                case JGNRWWANTypeUnknown:
                     statusStr = @"Mobile";
                     break;
                     
-                case JGNetworkReachabilityWWANGPRS:
+                case JGNRWWANTypeGPRS:
                     statusStr = @"GPRS";
                     break;
                     
-                case JGNetworkReachabilityWWAN2G:
+                case JGNRWWANType2G:
                     statusStr = @"2G";
                     break;
                     
-                case JGNetworkReachabilityWWAN3G:
+                case JGNRWWANType3G:
                     statusStr = @"3G";
                     break;
                     
-                case JGNetworkReachabilityWWAN4G:
+                case JGNRWWANType4G:
                     statusStr = @"4G";
                     break;
             }
@@ -431,6 +434,25 @@ static void JGNetworkReachabilityReleaseCallback(const void *info) {
     return statusStr;
 }
 
+#pragma mark - Deprecated
+- (void)addObserver:(id)observer action:(JGNetworkReachabilityStatusChangeAction)notification {
+    
+    [self addObserver:observer statusChangeBlock:(JGNRReachabilityStatusChangeBlock)notification];
+}
+
+- (void)removeActionWithObserver:(id)observer {
+    
+    [self removeStatusChangeBlockWithObserver:observer];
+}
+
+- (JGNRWWANType)WWANStatus {
+    return self.WWANType;
+}
+
 #pragma mark - End
+
+@end
+
+@implementation JGNetworkReachability
 
 @end

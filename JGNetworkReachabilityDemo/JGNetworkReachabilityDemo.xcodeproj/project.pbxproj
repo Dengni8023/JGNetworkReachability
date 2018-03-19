@@ -10,11 +10,11 @@
 		65CEB768817A9EC3395AF366 /* Pods_JGNetworkReachabilityDemo.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C2A4C64BAE8C0A63D32E783A /* Pods_JGNetworkReachabilityDemo.framework */; };
 		D4D1D829205F540500AA4B61 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D1D828205F540500AA4B61 /* AppDelegate.m */; };
 		D4D1D831205F540500AA4B61 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D4D1D830205F540500AA4B61 /* Assets.xcassets */; };
-		D4D1D834205F540500AA4B61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D1D832205F540500AA4B61 /* LaunchScreen.storyboard */; };
 		D4D1D837205F540500AA4B61 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D1D836205F540500AA4B61 /* main.m */; };
 		D4D1D83F205F543200AA4B61 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D1D83E205F543200AA4B61 /* ViewController.m */; };
 		D4D1D844205F54EF00AA4B61 /* JGDemoTableData.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D1D843205F54EF00AA4B61 /* JGDemoTableData.m */; };
 		D4D1D847205F56A500AA4B61 /* ReachabilityStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = D4D1D846205F56A500AA4B61 /* ReachabilityStatusViewController.m */; };
+		D4D1D880205FB76300AA4B61 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D4D1D87F205FB76300AA4B61 /* LaunchScreen.storyboard */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,7 +24,6 @@
 		D4D1D827205F540500AA4B61 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		D4D1D828205F540500AA4B61 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		D4D1D830205F540500AA4B61 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
-		D4D1D833205F540500AA4B61 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		D4D1D835205F540500AA4B61 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		D4D1D836205F540500AA4B61 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		D4D1D83D205F543200AA4B61 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
@@ -33,6 +32,7 @@
 		D4D1D843205F54EF00AA4B61 /* JGDemoTableData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JGDemoTableData.m; sourceTree = "<group>"; };
 		D4D1D845205F56A500AA4B61 /* ReachabilityStatusViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ReachabilityStatusViewController.h; sourceTree = "<group>"; };
 		D4D1D846205F56A500AA4B61 /* ReachabilityStatusViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ReachabilityStatusViewController.m; sourceTree = "<group>"; };
+		D4D1D87F205FB76300AA4B61 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FB670EE42DA15FDB1B4AB56C /* Pods-JGNetworkReachabilityDemo.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-JGNetworkReachabilityDemo.release.xcconfig"; path = "../Pods/Target Support Files/Pods-JGNetworkReachabilityDemo/Pods-JGNetworkReachabilityDemo.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,8 +92,8 @@
 				D4D1D83D205F543200AA4B61 /* ViewController.h */,
 				D4D1D83E205F543200AA4B61 /* ViewController.m */,
 				D4D1D830205F540500AA4B61 /* Assets.xcassets */,
-				D4D1D832205F540500AA4B61 /* LaunchScreen.storyboard */,
 				D4D1D835205F540500AA4B61 /* Info.plist */,
+				D4D1D87F205FB76300AA4B61 /* LaunchScreen.storyboard */,
 				D4D1D836205F540500AA4B61 /* main.m */,
 			);
 			path = JGNetworkReachabilityDemo;
@@ -130,7 +130,6 @@
 				D4D1D821205F540500AA4B61 /* Frameworks */,
 				D4D1D822205F540500AA4B61 /* Resources */,
 				805903E502EF03EB20FF4C79 /* [CP] Embed Pods Frameworks */,
-				4CB339737A3232EE00F97509 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -147,7 +146,7 @@
 		D4D1D81C205F540500AA4B61 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0940;
 				ORGANIZATIONNAME = MeiJigao;
 				TargetAttributes = {
 					D4D1D823205F540500AA4B61 = {
@@ -179,8 +178,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				D4D1D834205F540500AA4B61 /* LaunchScreen.storyboard in Resources */,
 				D4D1D831205F540500AA4B61 /* Assets.xcassets in Resources */,
+				D4D1D880205FB76300AA4B61 /* LaunchScreen.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -203,21 +202,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
-			showEnvVarsInLog = 0;
-		};
-		4CB339737A3232EE00F97509 /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/../Pods/Target Support Files/Pods-JGNetworkReachabilityDemo/Pods-JGNetworkReachabilityDemo-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		805903E502EF03EB20FF4C79 /* [CP] Embed Pods Frameworks */ = {
@@ -257,17 +241,6 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
-/* Begin PBXVariantGroup section */
-		D4D1D832205F540500AA4B61 /* LaunchScreen.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				D4D1D833205F540500AA4B61 /* Base */,
-			);
-			name = LaunchScreen.storyboard;
-			sourceTree = "<group>";
-		};
-/* End PBXVariantGroup section */
-
 /* Begin XCBuildConfiguration section */
 		D4D1D838205F540500AA4B61 /* Debug */ = {
 			isa = XCBuildConfiguration;
@@ -283,6 +256,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -290,6 +264,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -338,6 +313,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -345,6 +321,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
