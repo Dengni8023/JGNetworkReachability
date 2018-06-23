@@ -21,6 +21,7 @@
       "tag": "0.0.7"
     }
   ],
+  "requires_arc": true,
   "platforms": {
     "ios": "8.0"
   },
@@ -28,8 +29,7 @@
   "public_header_files": "JGNetworkReachability/*.h",
   "dependencies": {
     "JGSourceBase": [
-      "0.0.5"
+      "~> 0.1.0"
     ]
-  },
-  "requires_arc": true
+  }
 }
